@@ -1,0 +1,15 @@
+// JavaScript Document
+/*
+一进入就向Main类发送Ajax请求
+将返回图片和名字和Gid设置给对应栏内和用户图像
+
+通过点击游戏类别
+向GameType_Transfer类发送Ajax请求
+如果返回1则跳转到FindResult页面
+通过搜索游戏名
+向GameName_Transfer类发送Ajax请求
+如果返回1则跳转到FindResult页面
+
+点击游戏向Game_Transfer类发送含有Gid的Ajax请求
+如果返回1跳转到Game页面
+ */
