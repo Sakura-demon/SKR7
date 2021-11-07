@@ -18,6 +18,8 @@ public class GameType_Transfer extends HttpServlet {
         Cookie c2 = new Cookie("Game","TYPE");
         resp.addCookie(c1);
         resp.addCookie(c2);
+        PrintWriter pw = response.getWriter();
+        pw.println("1"); 
         /*
         接收前端发来游戏名
         将其保存到cookie内
