@@ -268,22 +268,48 @@ https://www.tooplate.com/view/2119-gymso-fitness
     padding-left: 1.5rem;
   }
 
-  
 /*游戏分类部分css*/
-  .navbar-brand {
-    color: var(--white-color);
-    font-size: var(--h3-font-size);
-    font-weight: var(--font-weight-bold);
-    line-height: normal;
-    padding-top: 0;
-    margin-right: 15rem;
-  }
+
+#menu,#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#menu>li {
+	position: relative;
+	float: left;
+  color: var(--white-color);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: normal;
+  padding-top: 0;
+  margin-right: 15rem;
+  list-style: none;
+  width: 180px;
+}
+#menu>li>ul {
+	position: absolute;
+	top: 100%;
+	background-color:var(--dark-color);
+	max-height: 0px;
+	overflow: hidden;
+	opacity: 0;
+	transition: all 600ms;
+}
+#menu>li:hover>ul {
+	max-height: 500px;
+  width: auto;
+	opacity: 1;
+}
+#menu>li li:hover {
+	background-color: rgb(95, 95, 97);
+}
 
 
 /*搜索框部分css*/
 
 .navbar-search{
-    width: 30%;         
+    width: 300px;         
     display: flex;
     /*border: 1px solid red;*/
 }
@@ -304,8 +330,6 @@ https://www.tooplate.com/view/2119-gymso-fitness
     color: white;
     border-style: none;
     outline: none;
-}
-.navbar-search button i{
     font-style: normal;
 }
 .navbar-search button:hover{
@@ -344,7 +368,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
   -----------------------------------------*/
 
   .hero {
-    background-image: url('../images/背景.jpg');
+    background-image: url('../Img/背景.jpg');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -502,7 +526,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
 
   /*---------------------------------------
-     CONTACT              
+     登陆界面部分            
   -----------------------------------------*/
 
   .webform input,
@@ -532,19 +556,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
     background: var(--primary-color);
   }
 
-  .contact h2 + p {
-    max-width: 90%;
-  }
 
-  .google-map {
-    border-top: 1px solid #efebeb;
-    margin-top: 2.5rem;
-    padding-top: 2.5rem;
-  }
-
-  .google-map iframe {
-    width: 100%;
-  }
 
 
   /*---------------------------------------

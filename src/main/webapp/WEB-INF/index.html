@@ -11,11 +11,11 @@
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/aos.css">
+     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+     <link rel="stylesheet" href="../CSS/font-awesome.min.css">
+     <link rel="stylesheet" href="../CSS/aos.css">
      
-     <link rel="stylesheet" href="css/tooplate-gymso-style.css">
+     <link rel="stylesheet" href="../CSS/tooplate-gymso-style.css">
 
 </head>
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
@@ -23,14 +23,26 @@
     <!-- 菜单栏 -->
     <nav class="navbar navbar-expand-lg fixed-top"><!--fixed-top使导航栏固定在顶部-->
         <div class="container">
-
-            <a class="navbar-brand" href="index.html">游戏分类</a>
-
+            <!--游戏分类部分-->
+            <ul id="menu">
+                <li>游戏分类
+                    <ul>
+                        <li>新游前瞻</li>
+                        <li>人气游戏</li>
+                        <li>同人视频作品</li>
+                        <li>同人绘画作品</li>
+                        <li>游戏设定集</li>
+                        <li>游戏原声集</li>
+                        <li>游戏周边</li>
+                    </ul>
+                </li>
+            </ul>
+            <!--搜索栏部分-->
             <div class="navbar-search">
                 <input type="text" placeholder="请输入..." name="" id="" value="" />
-                <button><i>搜索</i></button>
+                <button>搜索</button>
             </div>
-
+            <!--个人中心部分-->
             <div class="navbar-icon" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
@@ -38,7 +50,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><img src="images/user/用户头像.jpg"></a>
+                        <a href="#" class="nav-link"><img src="../Img/user/用户头像.jpg"></a>
                     </li>
 
                     <li class="nav-item">
@@ -51,25 +63,17 @@
     </nav>
 
 
-     <!-- HERO -->
+     <!-- 网页背景 -->
      <section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
-
             <div class="bg-overlay"></div>
-
                <div class="container">
                     <div class="row">
-
                          <div class="col-lg-8 col-md-10 mx-auto col-12">
                               <div class="hero-text mt-5 text-center">
-
                                     <h6 data-aos="fade-up" data-aos-delay="300">你想看的这里都有</h6>
-
                                     <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">欢迎来到游戏世界</h1>
-
-                                    <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600">立即体验</a>
-
-                                    <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">点我注册</a>
-                                   
+                                    <a href="#" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600" data-toggle="modal" data-target="#membershipForm">立即体验</a>
+                                    <a href="#" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700" data-toggle="modal" data-target="#loginForm">点我注册</a>
                               </div>
                          </div>
 
@@ -77,7 +81,7 @@
                </div>
      </section>
 
-
+     <!--新游前瞻-->
      <section class="feature" id="feature">
         
         <div class="container">
@@ -89,11 +93,11 @@
                         <div class="inner">
                             <!--轮播图-->
                             <ul>
-                                <li><a href="#"><img src="images/hero-bg.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/背景.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/class/yoga-class.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/class/crossfit-class.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/class/cardio-class.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="../Img/hero-bg.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="../Img/背景.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="../Img/class/yoga-class.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="../Img/class/crossfit-class.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="../Img/class/cardio-class.jpg" alt=""></a></li>
                             </ul>
                             <ol class="bar">
                                 
@@ -141,11 +145,11 @@
                     <div class="row">
                             <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="700">
                                 <div class="team-thumb">
-                                    <img src="images/team/team-image.jpg" class="img-fluid" alt="Trainer">
+                                    <img src="../Img/team/team-image.jpg" class="img-fluid" alt="Trainer">
 
                                     <div class="team-info d-flex flex-column">
 
-                                        <h3>Mary Yan</h3>
+                                        <h3>Mary Yan1</h3>
                                         <span>Yoga Instructor</span>
 
                                         <ul class="social-icon mt-3">
@@ -158,11 +162,11 @@
 
                             <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="700">
                                 <div class="team-thumb">
-                                    <img src="images/team/team-image.jpg" class="img-fluid" alt="Trainer">
+                                    <img src="../Img/team/team-image.jpg" class="img-fluid" alt="Trainer">
 
                                     <div class="team-info d-flex flex-column">
 
-                                        <h3>Mary Yan</h3>
+                                        <h3>Mary Yan2</h3>
                                         <span>Yoga Instructor</span>
 
                                         <ul class="social-icon mt-3">
@@ -175,7 +179,7 @@
 
                             <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="700">
                                 <div class="team-thumb">
-                                    <img src="images/team/team-image.jpg" class="img-fluid" alt="Trainer">
+                                    <img src="../Img/team/team-image.jpg" class="img-fluid" alt="Trainer">
 
                                     <div class="team-info d-flex flex-column">
 
@@ -190,9 +194,9 @@
                                 </div>
                             </div>
 
-                            <div class="mr-lg-auto mt-5 mt-lg-0 mt-md-0 col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="800">
+                            <div class="mr-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="700">
                                 <div class="team-thumb">
-                                    <img src="images/team/team-image01.jpg" class="img-fluid" alt="Trainer">
+                                    <img src="../Img/team/team-image01.jpg" class="img-fluid" alt="Trainer">
 
                                     <div class="team-info d-flex flex-column">
 
@@ -225,7 +229,7 @@
 
                             <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
                                 <div class="class-thumb">
-                                    <img src="images/class/yoga-class.jpg" class="img-fluid" alt="Class">
+                                    <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
                                         <h3 class="mb-1">Yoga</h3>
@@ -241,7 +245,7 @@
 
                             <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
                                 <div class="class-thumb">
-                                    <img src="images/class/crossfit-class.jpg" class="img-fluid" alt="Class">
+                                    <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
                                         <h3 class="mb-1">Areobic</h3>
@@ -257,7 +261,7 @@
 
                             <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
                                 <div class="class-thumb">
-                                    <img src="images/class/cardio-class.jpg" class="img-fluid" alt="Class">
+                                    <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
                                         <h3 class="mb-1">Cardio</h3>
@@ -278,18 +282,138 @@
 
      <!-- 同人绘画作品 -->
      <section class="schedule section" id="schedule">
-               <div class="container">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-12 text-center">
+                    <h6 data-aos="fade-up">这里有好多大触</h6>
+
+                    <h2 class="text-white" data-aos="fade-up" data-aos-delay="200">同人绘画作品</h2>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                    <div class="class-thumb">
+                        <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
+
+                        <div class="class-info">
+                            <h3 class="mb-1">Yoga</h3>
+                            <span><strong>Trained by</strong> - Bella</span>
+                            <span class="class-price">$50</span>
+                            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+                    <div class="class-thumb">
+                        <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
+
+                            <div class="class-info">
+                                <h3 class="mb-1">Areobic</h3>
+                                <span><strong>Trained by</strong> - Mary</span>
+                                <span class="class-price">$66</span>
+
+                                <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                    <div class="class-thumb">
+                        <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
+
+                        <div class="class-info">
+                            <h3 class="mb-1">Cardio</h3>
+
+                            <span><strong>Trained by</strong> - Cathe</span>
+
+                            <span class="class-price">$75</span>
+
+                            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- 游戏设定集 -->
+     <section class="class section" id="class">
+        <div class="container">
+             <div class="row">
+
+                     <div class="col-lg-12 col-12 text-center mb-5">
+                         <h6 data-aos="fade-up">创作一个新的世界</h6>
+
+                         <h2 data-aos="fade-up" data-aos-delay="200">游戏设定集</h2>
+                      </div>
+
+                     <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                         <div class="class-thumb">
+                             <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
+
+                             <div class="class-info">
+                                 <h3 class="mb-1">Yoga</h3>
+
+                                 <span><strong>Trained by</strong> - Bella</span>
+
+                                 <span class="class-price">$50</span>
+
+                                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                             </div>
+                         </div>
+                     </div>
+
+                     <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+                         <div class="class-thumb">
+                             <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
+
+                             <div class="class-info">
+                                 <h3 class="mb-1">Areobic</h3>
+
+                                 <span><strong>Trained by</strong> - Mary</span>
+
+                                 <span class="class-price">$66</span>
+
+                                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                             </div>
+                         </div>
+                     </div>
+
+                     <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                         <div class="class-thumb">
+                             <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
+
+                             <div class="class-info">
+                                 <h3 class="mb-1">Cardio</h3>
+
+                                 <span><strong>Trained by</strong> - Cathe</span>
+
+                                 <span class="class-price">$75</span>
+
+                                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                             </div>
+                         </div>
+                     </div>
+
+             </div>
+        </div>
+     </section>
+
+     <!--游戏原声集-->
+     <section class="schedule section" id="schedule">
+        <div class="container">
                     <div class="row">
 
                             <div class="col-lg-12 col-12 text-center">
-                                <h6 data-aos="fade-up">这里有好多大触</h6>
+                                <h6 data-aos="fade-up">这里有好多音乐</h6>
 
-                                <h2 class="text-white" data-aos="fade-up" data-aos-delay="200">同人绘画作品</h2>
+                                <h2 class="text-white" data-aos="fade-up" data-aos-delay="200">游戏原声集</h2>
                              </div>
 
                              <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
                                 <div class="class-thumb">
-                                    <img src="images/class/yoga-class.jpg" class="img-fluid" alt="Class">
+                                    <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
                                         <h3 class="mb-1">Yoga</h3>
@@ -305,7 +429,7 @@
 
                             <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
                                 <div class="class-thumb">
-                                    <img src="images/class/crossfit-class.jpg" class="img-fluid" alt="Class">
+                                    <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
                                         <h3 class="mb-1">Areobic</h3>
@@ -321,7 +445,7 @@
 
                             <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
                                 <div class="class-thumb">
-                                    <img src="images/class/cardio-class.jpg" class="img-fluid" alt="Class">
+                                    <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
                                         <h3 class="mb-1">Cardio</h3>
@@ -335,50 +459,73 @@
                                 </div>
                             </div>
                     </div>
-               </div>
+        </div>
      </section>
 
+     <!-- 游戏周边 -->
+     <section class="class section" id="class">
+        <div class="container">
+             <div class="row">
 
-     <!-- CONTACT -->
-     <section class="contact section" id="contact">
-          <div class="container">
-               <div class="row">
+                     <div class="col-lg-12 col-12 text-center mb-5">
+                         <h6 data-aos="fade-up">氪金使我快乐</h6>
 
-                    <div class="ml-auto col-lg-5 col-md-6 col-12">
-                        <h2 class="mb-4 pb-2" data-aos="fade-up" data-aos-delay="200">Feel free to ask anything</h2>
+                         <h2 data-aos="fade-up" data-aos-delay="200">游戏周边</h2>
+                      </div>
 
-                        <form action="#" method="post" class="contact-form webform" data-aos="fade-up" data-aos-delay="400" role="form">
-                            <input type="text" class="form-control" name="cf-name" placeholder="Name">
+                     <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                         <div class="class-thumb">
+                             <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
 
-                            <input type="email" class="form-control" name="cf-email" placeholder="Email">
+                             <div class="class-info">
+                                 <h3 class="mb-1">Yoga</h3>
 
-                            <textarea class="form-control" rows="5" name="cf-message" placeholder="Message"></textarea>
+                                 <span><strong>Trained by</strong> - Bella</span>
 
-                            <button type="submit" class="form-control" id="submit-button" name="submit">Send Message</button>
-                        </form>
-                    </div>
+                                 <span class="class-price">$50</span>
 
-                    <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12">
-                        <h2 class="mb-4" data-aos="fade-up" data-aos-delay="600">Where you can <span>find us</span></h2>
+                                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                             </div>
+                         </div>
+                     </div>
 
-                        <p data-aos="fade-up" data-aos-delay="800"><i class="fa fa-map-marker mr-1"></i> 120-240 Rio de Janeiro - State of Rio de Janeiro, Brazil</p>
-<!-- How to change your own map point
-	1. Go to Google Maps
-	2. Click on your location point
-	3. Click "Share" and choose "Embed map" tab
-	4. Copy only URL and paste it within the src="" field below
--->
-                        <div class="google-map" data-aos="fade-up" data-aos-delay="900">
-                           <iframe src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="1920" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                        </div>
-                    </div>
-                    
-               </div>
-          </div>
+                     <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+                         <div class="class-thumb">
+                             <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
+
+                             <div class="class-info">
+                                 <h3 class="mb-1">Areobic</h3>
+
+                                 <span><strong>Trained by</strong> - Mary</span>
+
+                                 <span class="class-price">$66</span>
+
+                                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                             </div>
+                         </div>
+                     </div>
+
+                     <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                         <div class="class-thumb">
+                             <img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">
+
+                             <div class="class-info">
+                                 <h3 class="mb-1">Cardio</h3>
+
+                                 <span><strong>Trained by</strong> - Cathe</span>
+
+                                 <span class="class-price">$75</span>
+
+                                 <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                             </div>
+                         </div>
+                     </div>
+
+             </div>
+        </div>
      </section>
 
-
-     <!-- FOOTER -->
+     <!-- 版权所有部分 -->
      <footer class="site-footer">
           <div class="container">
                <div class="row">
@@ -402,14 +549,14 @@
           </div>
      </footer>
 
-    <!-- Modal -->
+    <!-- Modal:此处写登录界面弹窗 -->
     <div class="modal fade" id="membershipForm" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
 
         <div class="modal-content">
           <div class="modal-header">
 
-            <h2 class="modal-title" id="membershipFormLabel">Membership Form</h2>
+            <h2 class="modal-title" id="membershipFormLabel">用户登录</h2>
 
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -418,19 +565,12 @@
 
           <div class="modal-body">
             <form class="membership-form webform" role="form">
-                <input type="text" class="form-control" name="cf-name" placeholder="John Doe">
-
-                <input type="email" class="form-control" name="cf-email" placeholder="Johndoe@gmail.com">
-
-                <input type="tel" class="form-control" name="cf-phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-
-                <textarea class="form-control" rows="3" name="cf-message" placeholder="Additional Message"></textarea>
-
-                <button type="submit" class="form-control" id="submit-button" name="submit">Submit Button</button>
-
+                <input type="text" class="form-control" name="cf-name" placeholder="点击输入账号">
+                <input type="tel" class="form-control" name="cf-phone" placeholder="点击输入密码" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <button type="submit" class="form-control" id="submit-button" name="submit">立刻登录</button>
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="signup-agree">
-                    <label class="custom-control-label text-small text-muted" for="signup-agree">I agree to the <a href="#">Terms &amp;Conditions</a>
+                    <label class="custom-control-label text-small text-muted" for="signup-agree">我同意 <a href="#">用户协议</a>
                     </label>
                 </div>
             </form>
@@ -442,13 +582,48 @@
       </div>
     </div>
 
-     <!-- SCRIPTS -->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/aos.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/custom.js"></script>
+    <!--Modal:此处写注册界面弹窗-->
+    <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginFormLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+  
+          <div class="modal-content">
+            <div class="modal-header">
+  
+              <h2 class="modal-title" id="loginFormLabel">用户注册</h2>
+  
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+  
+            <div class="modal-body">
+              <form class="login-form webform" role="form">
+                  <input type="text" class="form-control" name="cf-name" placeholder="点击输入账号">
+                  <input type="psw" class="form-control" name="login-psw" placeholder="点击输入密码" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                  <input type="psw" class="form-control" name="login-psw" placeholder="再次确认密码" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                  <button type="submit" class="form-control" id="submit-button" name="submit">立刻注册</button>
+                  <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="signup-agree">
+                      <label class="custom-control-label text-small text-muted" for="signup-agree">我同意 <a href="#">用户协议</a>
+                      </label>
+                  </div>
+              </form>
+            </div>
+  
+            <div class="modal-footer"></div>
+  
+          </div>
+        </div>
+      </div>
 
+     <!-- SCRIPTS -->
+     <script src="../JS/jquery.min.js"></script>
+     <script src="../JS/smoothscroll.js"></script>
+     <script src="../JS/custom.js"></script>
+     <script src="../JS/bootstrap.min.js"></script>
+     <script src="../JS/aos.js"></script>
+
+    <!--滚动播放图片-->
      <script>
         /**
          *
@@ -569,7 +744,35 @@
                 }
             }, 40);
         }
-    </script>
+     </script>
 
+     <!--鼠标经过有些分类出现下拉框-->
+     <script type="text/javascript">
+
+        window.οnlοad=function(){
+        
+        var oUl=document.getElementById('one');
+        
+        var aLi=oUl.children;//获取第一级菜单的四个子标签
+        
+        for (i=0;i<aLi.length;i++) {
+        
+        aLi[i].οnmοuseοver=function(){
+        
+        this.children[0].style.display='block';
+        
+        };
+        
+        aLi[i].οnmοuseοut=function(){
+        
+        this.children[0].style.display='none';
+        
+        };
+        
+        }
+        
+        };
+        
+        </script>
 </body>
 </html>
