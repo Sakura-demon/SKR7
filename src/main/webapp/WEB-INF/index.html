@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>游戏测评平台</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/aos.css">
+     
+     <link rel="stylesheet" href="css/tooplate-gymso-style.css">
+
+</head>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    <!-- 菜单栏 -->
+    <nav class="navbar navbar-expand-lg fixed-top"><!--fixed-top使导航栏固定在顶部-->
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">游戏分类</a>
+
+            <div class="navbar-search">
+                <input type="text" placeholder="请输入..." name="" id="" value="" />
+                <button><i>搜索</i></button>
+            </div>
+
+            <div class="navbar-icon" id="navbarNav">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">首页</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><img src="images/user/用户头像.jpg"></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#schedule" class="nav-link">历史记录</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+     <!-- HERO -->
+     <section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
+
+            <div class="bg-overlay"></div>
+
+               <div class="container">
+                    <div class="row">
+
+                         <div class="col-lg-8 col-md-10 mx-auto col-12">
+                              <div class="hero-text mt-5 text-center">
+
+                                    <h6 data-aos="fade-up" data-aos-delay="300">你想看的这里都有</h6>
+
+                                    <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">欢迎来到游戏世界</h1>
+
+                                    <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600">立即体验</a>
+
+                                    <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">点我注册</a>
+                                   
+                              </div>
+                         </div>
+
+                    </div>
+               </div>
+     </section>
+
+
+     <section class="feature" id="feature">
+        
+        <div class="container">
+            <h1 style="color: aliceblue;">新游前瞻</h1>
+            <div class="row">
+
+                <div class="d-flex flex-column justify-content-center ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12" >
+                    <div class="box" id="box">
+                        <div class="inner">
+                            <!--轮播图-->
+                            <ul>
+                                <li><a href="#"><img src="images/hero-bg.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/背景.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/class/yoga-class.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/class/crossfit-class.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/class/cardio-class.jpg" alt=""></a></li>
+                            </ul>
+                            <ol class="bar">
+                                
+                            </ol>
+                            <!--左右焦点-->
+                            <div id="arr">
+                                  <span id="left"> <</span>
+                                  <span id="right">></span>
+                            </div>
+                     
+                        </div>
+                    </div>
+                    <a href="#" class=""><button class="btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="#membershipForm" style="width: 500px;">点我立刻体验</button></a>    
+                </div>
+
+                <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
+                     <div class="about-working-hours">
+                          <div>
+
+                                <h2 class="mb-4 text-white" data-aos="fade-up" data-aos-delay="500">游戏标题</h2>
+
+                               <strong class="d-block" data-aos="fade-up" data-aos-delay="600">游戏厂家 : 厂家名</strong>
+
+                               <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700">发售日期</strong>
+
+                                <p data-aos="fade-up" data-aos-delay="800">7:00 AM - 10:00 PM</p>
+
+                                <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700">简介</strong>
+
+                                <p data-aos="fade-up" data-aos-delay="800">此处填写简介</p>
+                               </div>
+                          </div>
+                     </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+     <!-- 人气游戏 -->
+     <section class="about section" id="about">
+               <div class="container">
+                   <h1 style="color: black;">人气游戏</h1>
+                    <div class="row">
+                            <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="700">
+                                <div class="team-thumb">
+                                    <img src="images/team/team-image.jpg" class="img-fluid" alt="Trainer">
+
+                                    <div class="team-info d-flex flex-column">
+
+                                        <h3>Mary Yan</h3>
+                                        <span>Yoga Instructor</span>
+
+                                        <ul class="social-icon mt-3">
+                                            <li><a href="#" class="fa fa-twitter"></a></li>
+                                            <li><a href="#" class="fa fa-instagram"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="700">
+                                <div class="team-thumb">
+                                    <img src="images/team/team-image.jpg" class="img-fluid" alt="Trainer">
+
+                                    <div class="team-info d-flex flex-column">
+
+                                        <h3>Mary Yan</h3>
+                                        <span>Yoga Instructor</span>
+
+                                        <ul class="social-icon mt-3">
+                                            <li><a href="#" class="fa fa-twitter"></a></li>
+                                            <li><a href="#" class="fa fa-instagram"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="700">
+                                <div class="team-thumb">
+                                    <img src="images/team/team-image.jpg" class="img-fluid" alt="Trainer">
+
+                                    <div class="team-info d-flex flex-column">
+
+                                        <h3>Mary Yan</h3>
+                                        <span>Yoga Instructor</span>
+
+                                        <ul class="social-icon mt-3">
+                                            <li><a href="#" class="fa fa-twitter"></a></li>
+                                            <li><a href="#" class="fa fa-instagram"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mr-lg-auto mt-5 mt-lg-0 mt-md-0 col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="800">
+                                <div class="team-thumb">
+                                    <img src="images/team/team-image01.jpg" class="img-fluid" alt="Trainer">
+
+                                    <div class="team-info d-flex flex-column">
+
+                                        <h3>Catherina</h3>
+                                        <span>Body trainer</span>
+
+                                        <ul class="social-icon mt-3">
+                                            <li><a href="#" class="fa fa-instagram"></a></li>
+                                            <li><a href="#" class="fa fa-facebook"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+               </div>
+     </section>
+
+
+     <!-- 同人游戏作品 -->
+     <section class="class section" id="class">
+               <div class="container">
+                    <div class="row">
+
+                            <div class="col-lg-12 col-12 text-center mb-5">
+                                <h6 data-aos="fade-up">创作一个新的世界</h6>
+
+                                <h2 data-aos="fade-up" data-aos-delay="200">同人视频作品</h2>
+                             </div>
+
+                            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                                <div class="class-thumb">
+                                    <img src="images/class/yoga-class.jpg" class="img-fluid" alt="Class">
+
+                                    <div class="class-info">
+                                        <h3 class="mb-1">Yoga</h3>
+
+                                        <span><strong>Trained by</strong> - Bella</span>
+
+                                        <span class="class-price">$50</span>
+
+                                        <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+                                <div class="class-thumb">
+                                    <img src="images/class/crossfit-class.jpg" class="img-fluid" alt="Class">
+
+                                    <div class="class-info">
+                                        <h3 class="mb-1">Areobic</h3>
+
+                                        <span><strong>Trained by</strong> - Mary</span>
+
+                                        <span class="class-price">$66</span>
+
+                                        <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="class-thumb">
+                                    <img src="images/class/cardio-class.jpg" class="img-fluid" alt="Class">
+
+                                    <div class="class-info">
+                                        <h3 class="mb-1">Cardio</h3>
+
+                                        <span><strong>Trained by</strong> - Cathe</span>
+
+                                        <span class="class-price">$75</span>
+
+                                        <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+               </div>
+     </section>
+
+
+     <!-- 同人绘画作品 -->
+     <section class="schedule section" id="schedule">
+               <div class="container">
+                    <div class="row">
+
+                            <div class="col-lg-12 col-12 text-center">
+                                <h6 data-aos="fade-up">这里有好多大触</h6>
+
+                                <h2 class="text-white" data-aos="fade-up" data-aos-delay="200">同人绘画作品</h2>
+                             </div>
+
+                             <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                                <div class="class-thumb">
+                                    <img src="images/class/yoga-class.jpg" class="img-fluid" alt="Class">
+
+                                    <div class="class-info">
+                                        <h3 class="mb-1">Yoga</h3>
+
+                                        <span><strong>Trained by</strong> - Bella</span>
+
+                                        <span class="class-price">$50</span>
+
+                                        <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+                                <div class="class-thumb">
+                                    <img src="images/class/crossfit-class.jpg" class="img-fluid" alt="Class">
+
+                                    <div class="class-info">
+                                        <h3 class="mb-1">Areobic</h3>
+
+                                        <span><strong>Trained by</strong> - Mary</span>
+
+                                        <span class="class-price">$66</span>
+
+                                        <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="class-thumb">
+                                    <img src="images/class/cardio-class.jpg" class="img-fluid" alt="Class">
+
+                                    <div class="class-info">
+                                        <h3 class="mb-1">Cardio</h3>
+
+                                        <span><strong>Trained by</strong> - Cathe</span>
+
+                                        <span class="class-price">$75</span>
+
+                                        <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+               </div>
+     </section>
+
+
+     <!-- CONTACT -->
+     <section class="contact section" id="contact">
+          <div class="container">
+               <div class="row">
+
+                    <div class="ml-auto col-lg-5 col-md-6 col-12">
+                        <h2 class="mb-4 pb-2" data-aos="fade-up" data-aos-delay="200">Feel free to ask anything</h2>
+
+                        <form action="#" method="post" class="contact-form webform" data-aos="fade-up" data-aos-delay="400" role="form">
+                            <input type="text" class="form-control" name="cf-name" placeholder="Name">
+
+                            <input type="email" class="form-control" name="cf-email" placeholder="Email">
+
+                            <textarea class="form-control" rows="5" name="cf-message" placeholder="Message"></textarea>
+
+                            <button type="submit" class="form-control" id="submit-button" name="submit">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12">
+                        <h2 class="mb-4" data-aos="fade-up" data-aos-delay="600">Where you can <span>find us</span></h2>
+
+                        <p data-aos="fade-up" data-aos-delay="800"><i class="fa fa-map-marker mr-1"></i> 120-240 Rio de Janeiro - State of Rio de Janeiro, Brazil</p>
+<!-- How to change your own map point
+	1. Go to Google Maps
+	2. Click on your location point
+	3. Click "Share" and choose "Embed map" tab
+	4. Copy only URL and paste it within the src="" field below
+-->
+                        <div class="google-map" data-aos="fade-up" data-aos-delay="900">
+                           <iframe src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="1920" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+     <!-- FOOTER -->
+     <footer class="site-footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="ml-auto col-lg-4 col-md-5">
+                        <p class="copyright-text">Copyright &copy; 2020 Gymso Fitness Co.
+                        
+                        <br>版权所有: <a href="https://www.tooplate.com">Skr7团队</a></p>
+                    </div>
+
+                    <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
+                        <p class="mr-4">
+                            <i class="fa fa-envelope-o mr-1"></i>
+                            <a href="#">hello@skr7company.co</a>
+                        </p>
+
+                        <p><i class="fa fa-phone mr-1"></i> 010-020-0840</p>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="membershipForm" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <h2 class="modal-title" id="membershipFormLabel">Membership Form</h2>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <form class="membership-form webform" role="form">
+                <input type="text" class="form-control" name="cf-name" placeholder="John Doe">
+
+                <input type="email" class="form-control" name="cf-email" placeholder="Johndoe@gmail.com">
+
+                <input type="tel" class="form-control" name="cf-phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+                <textarea class="form-control" rows="3" name="cf-message" placeholder="Additional Message"></textarea>
+
+                <button type="submit" class="form-control" id="submit-button" name="submit">Submit Button</button>
+
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="signup-agree">
+                    <label class="custom-control-label text-small text-muted" for="signup-agree">I agree to the <a href="#">Terms &amp;Conditions</a>
+                    </label>
+                </div>
+            </form>
+          </div>
+
+          <div class="modal-footer"></div>
+
+        </div>
+      </div>
+    </div>
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/aos.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+
+     <script>
+        /**
+         *
+         * @param id  传入元素的id
+         * @returns {HTMLElement | null}  返回标签对象，方便获取元素
+         */
+        function my$(id) {
+            return document.getElementById(id);
+        }
+     
+        //获取各元素，方便操作
+        var box=my$("box");
+        var inner=box.children[0];
+        var ulObj=inner.children[0];
+        var list=ulObj.children;
+        var olObj=inner.children[1];
+        var arr=my$("arr");
+        var imgWidth=inner.offsetWidth;
+        var right=my$("right");
+        var pic=0;
+        //根据li个数，创建小按钮
+        for(var i=0;i<list.length;i++){
+            var liObj=document.createElement("li");
+     
+            olObj.appendChild(liObj);
+            liObj.innerText=(i+1);
+            liObj.setAttribute("index",i);
+     
+            //为按钮注册mouseover事件
+            liObj.onmouseover=function () {
+                //先清除所有按钮的样式
+     
+                for (var j=0;j<olObj.children.length;j++){
+                    olObj.children[j].removeAttribute("class");
+                }
+                this.className="current";
+                pic=this.getAttribute("index");
+                animate(ulObj,-pic*imgWidth);
+            }
+     
+        }
+     
+     
+        //设置ol中第一个li有背景颜色
+        olObj.children[0].className = "current";
+        //克隆一个ul中第一个li,加入到ul中的最后=====克隆
+        ulObj.appendChild(ulObj.children[0].cloneNode(true));
+     
+        var timeId=setInterval(onmouseclickHandle,2000);
+        //左右焦点实现点击切换图片功能
+        box.onmouseover=function () {
+            arr.style.display="block";
+            clearInterval(timeId);
+        };
+        box.onmouseout=function () {
+            arr.style.display="none";
+            timeId=setInterval(onmouseclickHandle,2000);
+        };
+     
+        right.onclick=onmouseclickHandle;
+        function onmouseclickHandle() {
+            //如果pic的值是5,恰巧是ul中li的个数-1的值,此时页面显示第六个图片,而用户会认为这是第一个图,
+            //所以,如果用户再次点击按钮,用户应该看到第二个图片
+            if (pic == list.length - 1) {
+                //如何从第6个图,跳转到第一个图
+                pic = 0;//先设置pic=0
+                ulObj.style.left = 0 + "px";//把ul的位置还原成开始的默认位置
+            }
+            pic++;//立刻设置pic加1,那么此时用户就会看到第二个图片了
+            animate(ulObj, -pic * imgWidth);//pic从0的值加1之后,pic的值是1,然后ul移动出去一个图片
+            //如果pic==5说明,此时显示第6个图(内容是第一张图片),第一个小按钮有颜色,
+            if (pic == list.length - 1) {
+                //第五个按钮颜色干掉
+                olObj.children[olObj.children.length - 1].className = "";
+                //第一个按钮颜色设置上
+                olObj.children[0].className = "current";
+            } else {
+                //干掉所有的小按钮的背景颜色
+                for (var i = 0; i < olObj.children.length; i++) {
+                    olObj.children[i].removeAttribute("class");
+                }
+                olObj.children[pic].className = "current";
+            }
+        }
+        left.onclick=function () {
+            if (pic==0){
+                pic=list.length-1;
+                ulObj.style.left=-pic*imgWidth+"px";
+            }
+            pic--;
+            animate(ulObj,-pic*imgWidth);
+            for (var i = 0; i < olObj.children.length; i++) {
+                olObj.children[i].removeAttribute("class");
+            }
+            //当前的pic索引对应的按钮设置颜色
+            olObj.children[pic].className = "current";
+        };
+        
+        //设置任意的一个元素,移动到指定的目标位置
+        function animate(element, target) {
+            clearInterval(element.timeId);
+            //定时器的id值存储到对象的一个属性中
+            element.timeId = setInterval(function () {
+                //获取元素的当前的位置,数字类型
+                var current = element.offsetLeft;
+                //每次移动的距离
+                var step = 10;
+                step = current < target ? step : -step;
+                //当前移动到位置
+                current += step;
+                if (Math.abs(current - target) > Math.abs(step)) {
+                    element.style.left = current + "px";
+                } else {
+                    //清理定时器
+                    clearInterval(element.timeId);
+                    //直接到达目标
+                    element.style.left = target + "px";
+                }
+            }, 40);
+        }
+    </script>
+
+</body>
+</html>
