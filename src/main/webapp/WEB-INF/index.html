@@ -38,10 +38,14 @@
                 </li>
             </ul>
             <!--搜索栏部分-->
-            <div class="navbar-search">
-                <input type="text" placeholder="请输入..." name="" id="" value="" />
-                <button>搜索</button>
-            </div>
+            <form action="get">
+                <div class="navbar-search">
+                    <input type="text" placeholder="请输入..." name="search" value="" />
+                    <button>搜索</button>
+                </div>
+            </form>
+                
+            
             <!--个人中心部分-->
             <div class="navbar-icon" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
@@ -565,8 +569,8 @@
 
           <div class="modal-body">
             <form class="membership-form webform" role="form">
-                <input type="text" class="form-control" name="cf-name" placeholder="点击输入账号">
-                <input type="tel" class="form-control" name="cf-phone" placeholder="点击输入密码" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <input type="text" class="form-control" name="name" placeholder="点击输入账号" id="name">
+                <input type="password" class="form-control" name="psw" placeholder="点击输入密码" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required id="password">
                 <button type="submit" class="form-control" id="submit-button" name="submit">立刻登录</button>
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="signup-agree">
@@ -585,28 +589,22 @@
     <!--Modal:此处写注册界面弹窗-->
     <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginFormLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-  
           <div class="modal-content">
+
             <div class="modal-header">
-  
               <h2 class="modal-title" id="loginFormLabel">用户注册</h2>
-  
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-  
+
+            <!--此处点击注册按钮后会导致页面刷新问题还没解决-->
             <div class="modal-body">
               <form class="login-form webform" role="form">
-                  <input type="text" class="form-control" name="cf-name" placeholder="点击输入账号">
-                  <input type="psw" class="form-control" name="login-psw" placeholder="点击输入密码" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                  <input type="psw" class="form-control" name="login-psw" placeholder="再次确认密码" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                  <button type="submit" class="form-control" id="submit-button" name="submit">立刻注册</button>
-                  <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="signup-agree">
-                      <label class="custom-control-label text-small text-muted" for="signup-agree">我同意 <a href="#">用户协议</a>
-                      </label>
-                  </div>
+                  <input type="text" class="form-control" name="cf-name" placeholder="请输入12位的用户名" id="reg-name">
+                  <input type="password" class="form-control" name="login-psw" placeholder="点击输入密码" id="reg-password">
+                  <input type="password" class="form-control" name="login-psw" placeholder="再次确认密码" id="reg-password-check">
+                  <button type="submit" class="form-control" id="submit-button-reg" name="submit">立刻注册</button>
               </form>
             </div>
   
@@ -622,7 +620,8 @@
      <script src="../JS/custom.js"></script>
      <script src="../JS/bootstrap.min.js"></script>
      <script src="../JS/aos.js"></script>
-
+     <script src="../JS/login.js"></script>
+     <script src="../JS/register.js"></script>
     <!--滚动播放图片-->
      <script>
         /**
@@ -747,7 +746,7 @@
      </script>
 
      <!--鼠标经过有些分类出现下拉框-->
-     <script type="text/javascript">
+    <script type="text/javascript">
 
         window.οnlοad=function(){
         
@@ -773,6 +772,6 @@
         
         };
         
-        </script>
+    </script>
 </body>
 </html>

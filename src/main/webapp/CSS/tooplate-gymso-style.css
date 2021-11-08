@@ -1,10 +1,4 @@
-/*
 
-Tooplate 2119 Gymso Fitness
-
-https://www.tooplate.com/view/2119-gymso-fitness
-
-*/
 
   @font-face {
       font-family: 'Plain';
@@ -172,6 +166,28 @@ https://www.tooplate.com/view/2119-gymso-fitness
     background: var(--primary-color);
     color: var(--white-color);
   }
+
+  /*---------------------------------------
+     搜索BUTTONS               
+  -----------------------------------------*/
+
+  .section-btn {
+    background: #29ca8e;
+    border: 0;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 12px 30px;
+    transition: 0.5s 0.2s;
+  }
+
+  .section-btn:hover,
+  .section-btn:focus {
+    background: #202020;
+    color: #ffffff;
+  }
+
 
 
 
@@ -556,6 +572,21 @@ https://www.tooplate.com/view/2119-gymso-fitness
     background: var(--primary-color);
   }
 
+  button#submit-button-reg {
+    height: calc(2.25rem + 20px);
+  }
+  button#submit-button-reg {
+    background: var(--dark-color);
+    border-color: transparent;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button#submit-button-reg:hover {
+    background: var(--primary-color);
+  }
+
 
 
 
@@ -631,6 +662,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
       display: block;
     }
   }
+
 
 
 
@@ -714,3 +746,4 @@ ol .current{
     right: 5px;
     left: auto;
 }
+
