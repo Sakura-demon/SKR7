@@ -1,7 +1,7 @@
 // JavaScript Document
 /*
 一进入就向Main类发送Ajax请求
-将返回图片和名字和Gid设置给对应栏内和用户图像
+将返回图片路径和名字和Gid设置给对应栏内和用户图像
 
 通过点击游戏类别
 向GameType_Transfer类发送Ajax请求

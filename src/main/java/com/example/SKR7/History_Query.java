@@ -15,8 +15,9 @@ public class History_Query extends HttpServlet {
         super.doPost(req, resp);
         /*
         从cookie中拿出Uid
+        接收前端发来的flag
         调用History_Query存储过程
-        返回图片和名字给前端
+        返回图片路径和名字和Vid/Pid/GSid/GMid/GAid给前端
          */
     }
 }
