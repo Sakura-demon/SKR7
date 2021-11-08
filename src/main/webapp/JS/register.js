@@ -15,7 +15,7 @@ $(function(){
         }
 		else{
 			$.ajax({
-				url:"User_Signup",
+				url:"Register",
 				type:"post",
 				data:{
 					"Upname":$("#reg-name").val(),
