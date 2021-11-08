@@ -10,12 +10,15 @@
      <meta name="keywords" content="">
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
-     <link rel="stylesheet" href="../CSS/font-awesome.min.css">
-     <link rel="stylesheet" href="../CSS/aos.css">
      
-     <link rel="stylesheet" href="../CSS/tooplate-gymso-style.css">
+     <link rel="icon" href="Img/樱花招福御守.png" type="image/x-icon" />
+     <link rel="shortcut icon" href="Img/樱花招福御守.png" type="image/x-icon"/>
+ 
+     <link rel="stylesheet" href="CSS/bootstrap.min.css">
+     <link rel="stylesheet" href="CSS/font-awesome.min.css">
+     <link rel="stylesheet" href="CSS/aos.css">
+     
+     <link rel="stylesheet" href="CSS/tooplate-gymso-style.css">
 
 </head>
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
@@ -27,21 +30,20 @@
             <ul id="menu">
                 <li>游戏分类
                     <ul>
-                        <li>新游前瞻</li>
-                        <li>人气游戏</li>
-                        <li>同人视频作品</li>
-                        <li>同人绘画作品</li>
-                        <li>游戏设定集</li>
-                        <li>游戏原声集</li>
-                        <li>游戏周边</li>
+                        <li id="action-game">动作</li>
+                        <li id="role-game">角色扮演</li>
+                        <li id="strategy-game">策略</li>
+                        <li id="relax-game">冒险及休闲</li>
+                        <li id="sim-game">模拟</li>
+                        <li id="sport-game">体育及竞速</li>
                     </ul>
                 </li>
             </ul>
             <!--搜索栏部分-->
             <form action="get">
                 <div class="navbar-search">
-                    <input type="text" placeholder="请输入..." name="search" value="" />
-                    <button>搜索</button>
+                    <input type="text" placeholder="请输入..." name="search" id="search" value=""/>
+                    <button id="search-but">搜索</button>
                 </div>
             </form>
                 
@@ -54,7 +56,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><img src="../Img/user/用户头像.jpg"></a>
+                        <a href="#" class="nav-link"><img src="Img/user/用户头像.jpg"></a>
                     </li>
 
                     <li class="nav-item">
@@ -615,13 +617,16 @@
       </div>
 
      <!-- SCRIPTS -->
-     <script src="../JS/jquery.min.js"></script>
-     <script src="../JS/smoothscroll.js"></script>
-     <script src="../JS/custom.js"></script>
-     <script src="../JS/bootstrap.min.js"></script>
-     <script src="../JS/aos.js"></script>
-     <script src="../JS/login.js"></script>
-     <script src="../JS/register.js"></script>
+     <script src="JS/jquery.min.js"></script>
+     <script src="JS/smoothscroll.js"></script>
+     <script src="JS/custom.js"></script>
+     <script src="JS/bootstrap.min.js"></script>
+     <script src="JS/aos.js"></script>
+     <script src="JS/login.js"></script>
+     <script src="JS/register.js"></script>
+     <script src="JS/gamesearch.js"></script>
+
+
     <!--滚动播放图片-->
      <script>
         /**

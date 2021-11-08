@@ -1,0 +1,135 @@
+/*此部分为游戏查找部分*/
+
+/*此处为按游戏分类查找*/
+$(function(){
+	$("#action-game").click(function(){
+		$.ajax({
+			url:"GameType_Query",
+			type:"post",
+			data:{
+				"Gname":"action-game",
+			},
+			datatype:"json",
+			error:function(error){
+				alert(error+"请求失败");
+			},
+			success:function(result){
+				window.location.href = "FindResult.html?result="+result;
+				console.log(result)
+			}
+		})
+	})
+    $("#role-game").click(function(){
+		$.ajax({
+			url:"GameType_Query",
+			type:"post",
+			data:{
+				"Gname":"role-game",
+			},
+			datatype:"json",
+			error:function(error){
+				alert(error+"请求失败");
+			},
+			success:function(result){
+				window.location.href = "FindResult.html?result="+result;
+				console.log(result)
+			}
+		})
+	})
+    $("#strategy-game").click(function(){
+		$.ajax({
+			url:"GameType_Query",
+			type:"post",
+			data:{
+				"Gname":"strategy-game",
+			},
+			datatype:"json",
+			error:function(error){
+				alert(error+"请求失败");
+			},
+			success:function(result){
+				window.location.href = "FindResult.html?result="+result;
+				console.log(result)
+			}
+		})
+	})
+    $("#relax-game").click(function(){
+		$.ajax({
+			url:"GameType_Query",
+			type:"post",
+			data:{
+				"Gname":"relax-game",
+			},
+			datatype:"json",
+			error:function(error){
+				alert(error+"请求失败");
+			},
+			success:function(result){
+				window.location.href = "FindResult.html?result="+result;
+				console.log(result)
+			}
+		})
+	})
+    $("#sim-game").click(function(){
+		$.ajax({
+			url:"GameType_Query",
+			type:"post",
+			data:{
+				"Gname":"sim-game",
+			},
+			datatype:"json",
+			error:function(error){
+				alert(error+"请求失败");
+			},
+			success:function(result){
+				window.location.href = "FindResult.html?result="+result;
+				console.log(result)
+			}
+		})
+	})
+    $("#sport-game").click(function(){
+		$.ajax({
+			url:"GameType_Query",
+			type:"post",
+			data:{
+				"Gname":"sport-game",
+			},
+			datatype:"json",
+			error:function(error){
+				alert(error+"请求失败");
+			},
+			success:function(result){
+				window.location.href = "FindResult.html?result="+result;
+				console.log(result)
+			}
+		})
+	})
+})
+
+/*此部分为搜索查找游戏部分*/
+$(function(){
+    $("#search-but").click(function(){
+        if($("#search").val() == ""){
+            alert("输入不可为空");
+            window.location.href="../index.html";
+            alert("返回主页")
+        }
+        else{
+            $.ajax({
+			url:"GameType_Query",
+			type:"post",
+			data:{
+				"Gname":$("#search").val(),
+			},
+			datatype:"json",
+			error:function(error){
+				alert(error+"请求失败");
+			},
+			success:function(result){
+				window.location.href = "FindResult.html?result="+result;
+				console.log(result)
+			}
+		    })
+        }
+	})
+})
