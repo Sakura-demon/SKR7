@@ -16,7 +16,7 @@ public class Game_Query extends HttpServlet {
         /*
         从cookie内拿出Gid
         调用Game_Query存储过程
-        返回图片和名字
+        返回图片路径和名字和Gid
          */
     }
 }
