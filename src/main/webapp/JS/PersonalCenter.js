@@ -20,3 +20,62 @@
 向Logout类发送Ajax请求
 接收到1跳转到SignINAndRegister界面
  */
+function getJSON(){
+    $.ajax({{
+        url:'action.php?act=getUserName',
+            dataType:'json',
+            async:false,
+            type:'get',
+            data:{},
+    });
+
+}
+function Upassword(uid){
+    $("input[name='uiid']".val(uid);
+    $("#tanchukuang").show;
+}
+<!--关闭按钮的关闭事件-->
+$("#close").click(function(){
+    $("#tanchukuang").hide();
+})
+$("#gb").click(function(){
+    $("#tanchukuang").hide();
+});
+<!--密码输入小于或者大于为6位时，禁止用户提交-->
+$(function(){
+    $("#StorePassword".on('input',function(){
+        if(this.value.length===6){
+            $(".queding").prop('disabled',false);
+        }else{
+            $(".queding").prop('disabled',true);
+        }
+        $("#newStorePassword").on('input',function(){
+            if(this.value.length===6){
+                $(".queding").prop('disabled',false);
+            }else{
+                $(".queding").prop('disabled',true);
+            }
+        });
+    });
+});
+<!--两次密码输入进行比较-->
+$(function(){
+    $(".queding").click(function(){
+        var p1=$("#StorePassword").val();
+        var p1=$("#newStorePassword").val();
+        if(!p1){
+            alert("密码不能为空!");
+        }else(p1!=p2){
+            windows.alert("请确认两次输入的密码是否一致")
+            return;
+        }else{
+            var data={
+                "uid":$("input[name='uiid']")
+            }
+            $.post('userStore/updatePassword.smk',data,function(data){
+            })
+            alert("密码修改成功！");
+        }
+    })
+});
+

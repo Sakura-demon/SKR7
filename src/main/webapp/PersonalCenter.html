@@ -1,16 +1,115 @@
-<!--负责人：郝冰冰-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-	<link rel="stylesheet" href="CSS/PersonalCenter.css">
-	<script src="JS/JQueryMin.js"></script>
-	<script src="JS/PersonalCenter.js"></script>
-	<link rel="icon" href="Img/樱花招福御守.png" type="image/x-icon" />
-	<link rel="shortcut icon" href="Img/樱花招福御守.png" type="image/x-icon"/>
+@charset "utf - 8";
+body{
+background:no-repeat fixed;
+background-position:center;
+background-size:cover;
+margin:0;
+}
+.round_icon{
+width:100px;
+height:100px;
+display:flex;
+border-radius:50%;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+.userbox{
+display: flex;
+justify-content: center;
+width: 100%
+}
+.sys{
+display: flex;
+justify-content: space-around;
+width: 100%
+}
+#submit{
+background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+height: 121px;
+width: 100%;
+border-radius: 10px;
+font-size: 40px;
+font-family: 楷体;
+font-weight: bolder;
+}
+#submit:hover{
+background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+
+
+
+
+<link rel="shortcut icon" href="Img/樱花招福御守.png" type="image/x-icon"/>
 </head>
 <body>
+<div class='userbox'>
+	<img src="" class="round_icon"alt="">
+</div>
+<div>
+	<p class='userbox'>用户名
+		<input type="text" name="uname" placeholder="用户名"/>
+	</p></div>
+<div class='sys'>
+	<button type="button" onclick="">修改密码</button>
+</div>
+<div class="modal changepassesModal" id="tanchukuang">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<!-- 创建隐藏域，得到uid用户的id(js中无法使用el)，因为修改当前用户的密码，首先要知道获取当前用户所在数据表中的id-->
+				<input name="uiid" type="hidden"/>
+				<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true" id="gb">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">
+					<i class="icon-info"></i><span style="margin-left: .5em;">修改密码</span>
+				</h4>
+			</div>
+
+			<!-- BEGIN FORM 修改密码的第一要素：输入新密码-->
+			<form class="form-horizontal" method="post" name="passForm"
+				  novalidate>
+				<div class="modal-body">
+					<div class="form-body">
+						<div class="form-group">
+							<label class="control-label col-md-3">新密码</label>
+							<div class="input-icon col-md-7">
+								<i class="fa fa-lock" style="margin-left: 1.5em;"></i> <input
+									class="form-control placeholder-no-fix" type="password"
+									placeholder="新密码" name="StorePassword" id="StorePassword" required /><span
+									class="help-block" hidden   minlength="6" maxlength="6"
+							></span>
+							</div>
+						</div>
+						<!-- 修改密码的第二要素：确定新密码-->
+						<div class="form-group">
+							<label class="control-label col-md-3">确认密码</label>
+							<div class="controls">
+								<div class="input-icon col-md-7">
+									<i class="fa fa-check" style="margin-left: 1.5em;"></i>
+									<input class="form-control placeholder-no-fix" type="password"
+										   placeholder="确认密码" name="newStorePassword" id="newStorePassword" required/><span
+										class="help-block" hidden  minlength="6" maxlength="6"
+								></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 关闭和确定修改-->
+				<div class="modal-footer">
+					<button type="button" id="close" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn blue queding">确定</button>
+				</div>
+			</form>
+
+			<!-- END FORM-->
+		</div>
+	</div>
+</div>
+<div class='sys'>
+	<INPUT type="button" name="" value="保存" >
+</div>
 
 </body>
 </html>
