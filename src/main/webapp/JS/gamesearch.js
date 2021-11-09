@@ -2,12 +2,12 @@
 
 /*此处为按游戏分类查找*/
 $(function(){
-	$("#action-game").click(function(){
+	$("#action").click(function(){
 		$.ajax({
 			url:"GameType_Query",
 			type:"post",
 			data:{
-				"Gname":"action-game",
+				"Gtype":"action",
 			},
 			datatype:"json",
 			error:function(error){
@@ -19,12 +19,12 @@ $(function(){
 			}
 		})
 	})
-    $("#role-game").click(function(){
+    $("#role").click(function(){
 		$.ajax({
 			url:"GameType_Query",
 			type:"post",
 			data:{
-				"Gname":"role-game",
+				"Gtype":"role",
 			},
 			datatype:"json",
 			error:function(error){
@@ -36,12 +36,12 @@ $(function(){
 			}
 		})
 	})
-    $("#strategy-game").click(function(){
+    $("#strategy").click(function(){
 		$.ajax({
 			url:"GameType_Query",
 			type:"post",
 			data:{
-				"Gname":"strategy-game",
+				"Gtype":"strategy",
 			},
 			datatype:"json",
 			error:function(error){
@@ -53,12 +53,12 @@ $(function(){
 			}
 		})
 	})
-    $("#relax-game").click(function(){
+    $("#relax").click(function(){
 		$.ajax({
 			url:"GameType_Query",
 			type:"post",
 			data:{
-				"Gname":"relax-game",
+				"Gtype":"relax",
 			},
 			datatype:"json",
 			error:function(error){
@@ -70,12 +70,12 @@ $(function(){
 			}
 		})
 	})
-    $("#sim-game").click(function(){
+    $("#sim").click(function(){
 		$.ajax({
 			url:"GameType_Query",
 			type:"post",
 			data:{
-				"Gname":"sim-game",
+				"Gtype":"sim",
 			},
 			datatype:"json",
 			error:function(error){
@@ -87,12 +87,12 @@ $(function(){
 			}
 		})
 	})
-    $("#sport-game").click(function(){
+    $("#sport").click(function(){
 		$.ajax({
 			url:"GameType_Query",
 			type:"post",
 			data:{
-				"Gname":"sport-game",
+				"Gtype":"sport",
 			},
 			datatype:"json",
 			error:function(error){
@@ -106,17 +106,16 @@ $(function(){
 	})
 })
 
-/*此部分为搜索查找游戏部分*/
+/*此部分为搜索框查找游戏部分*/
 $(function(){
     $("#search-but").click(function(){
         if($("#search").val() == ""){
-            alert("输入不可为空");
+            $("#search").attr({placeholder:"输入不可为空",class:"error"});
             window.location.href="../index.html";
-            alert("返回主页")
         }
         else{
             $.ajax({
-			url:"GameType_Query",
+			url:"GameName_Query",
 			type:"post",
 			data:{
 				"Gname":$("#search").val(),
@@ -126,7 +125,6 @@ $(function(){
 				alert(error+"请求失败");
 			},
 			success:function(result){
-				window.location.href = "FindResult.html?result="+result;
 				console.log(result)
 			}
 		    })
