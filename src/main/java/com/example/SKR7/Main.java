@@ -133,6 +133,7 @@ public class Main extends HttpServlet {
                         jsonObjectVideo.put("Vurl",imgUrl);
                         jsonObjectVideo.put("Vname",name);
                         jsonObjectVideo.put("Gid",Gid);
+                        jsonObjectVideo.put("Login",1);
                         jsonArray.add(jsonObjectVideo);
                         break;
                     case 2:
@@ -140,6 +141,7 @@ public class Main extends HttpServlet {
                         jsonObjectPainting.put("Purl",imgUrl);
                         jsonObjectPainting.put("Pname",name);
                         jsonObjectPainting.put("Gid",Gid);
+                        jsonObjectPainting.put("Login",1);
                         jsonArray.add(jsonObjectPainting);
                         break;
                     case 3:
@@ -147,6 +149,7 @@ public class Main extends HttpServlet {
                         jsonObjectGSetting.put("GSurl",imgUrl);
                         jsonObjectGSetting.put("GSname",name);
                         jsonObjectGSetting.put("Gid",Gid);
+                        jsonObjectGSetting.put("Login",1);
                         jsonArray.add(jsonObjectGSetting);
                         break;
                     case 4:
@@ -154,6 +157,7 @@ public class Main extends HttpServlet {
                         jsonObjectGMusic.put("GMurl",imgUrl);
                         jsonObjectGMusic.put("GMname",name);
                         jsonObjectGMusic.put("Gid",Gid);
+                        jsonObjectGMusic.put("Login",1);
                         jsonArray.add(jsonObjectGMusic);
                         break;
                     case 5:
@@ -161,6 +165,7 @@ public class Main extends HttpServlet {
                         jsonObjectGAccessories.put("GAimgurl",imgUrl);
                         jsonObjectGAccessories.put("GAname",name);
                         jsonObjectGAccessories.put("Gid",Gid);
+                        jsonObjectGAccessories.put("Login",1);
                         jsonArray.add(jsonObjectGAccessories);
                         break;
                 }
@@ -221,6 +226,7 @@ public class Main extends HttpServlet {
                         jsonObjectVideo.put("Vurl", imgUrl);
                         jsonObjectVideo.put("Vname", name);
                         jsonObjectVideo.put("Gid", Gid);
+                        jsonObjectVideo.put("Login",0);
                         jsonArray.add(jsonObjectVideo);
                         break;
                     case 2:
@@ -228,6 +234,7 @@ public class Main extends HttpServlet {
                         jsonObjectPainting.put("Purl", imgUrl);
                         jsonObjectPainting.put("Pname", name);
                         jsonObjectPainting.put("Gid", Gid);
+                        jsonObjectPainting.put("Login",0);
                         jsonArray.add(jsonObjectPainting);
                         break;
                     case 3:
@@ -235,6 +242,7 @@ public class Main extends HttpServlet {
                         jsonObjectGSetting.put("GSurl", imgUrl);
                         jsonObjectGSetting.put("GSname", name);
                         jsonObjectGSetting.put("Gid", Gid);
+                        jsonObjectGSetting.put("Login",0);
                         jsonArray.add(jsonObjectGSetting);
                         break;
                     case 4:
@@ -242,6 +250,7 @@ public class Main extends HttpServlet {
                         jsonObjectGMusic.put("GMurl", imgUrl);
                         jsonObjectGMusic.put("GMname", name);
                         jsonObjectGMusic.put("Gid", Gid);
+                        jsonObjectGMusic.put("Login",0);
                         jsonArray.add(jsonObjectGMusic);
                         break;
                     case 5:
@@ -249,6 +258,7 @@ public class Main extends HttpServlet {
                         jsonObjectGAccessories.put("GAimgurl", imgUrl);
                         jsonObjectGAccessories.put("GAname", name);
                         jsonObjectGAccessories.put("Gid", Gid);
+                        jsonObjectGAccessories.put("Login",0);
                         jsonArray.add(jsonObjectGAccessories);
                         break;
                 }
