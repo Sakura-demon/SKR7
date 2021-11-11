@@ -62,7 +62,7 @@ function showGamePage(Gid){
 			var obj = JSON.parse(result);
 			var box = document.getElementById("usericon");
             if(result.flag==1){
-                window.href.location="../Game.html"
+                window.location.href="../Game.html"
             }else{
                 alert('跳转失败')
             }
