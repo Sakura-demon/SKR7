@@ -71,7 +71,6 @@ function showGamePage(Gid){
 }
 
 function showpageResult(){
-	var Choice = document.getElementById("result");
     /*要获取返回数据的个数以及游戏各种数据
       向后台获取数据
     */
