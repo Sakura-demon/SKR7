@@ -20,6 +20,12 @@
 向Logout类发送Ajax请求
 接收到1跳转到SignINAndRegister界面
  */
+    $(function(){
+    $(".main_left li").on("click",function(){
+        var address =$(this).attr("data-src");
+        $("iframe").attr("src",address);
+    });
+});
 function getJSON(){
     $.ajax({
         url:'action.php?act=getUserName',

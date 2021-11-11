@@ -416,54 +416,6 @@ strong {
 }
 
 
-/*---------------------------------------
-   登陆界面部分
------------------------------------------*/
-
-.webform input,
-button#submit-button {
-    height: calc(2.25rem + 20px);
-}
-
-.form-control {
-    border-radius: var(--border-radius-small);
-    margin: 1.3rem 0;
-}
-
-.form-control:focus {
-    box-shadow: none;
-    border-color: var(--dark-color);
-}
-
-button#submit-button {
-    background: var(--dark-color);
-    border-color: transparent;
-    color: var(--white-color);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-button#submit-button:hover {
-    background: var(--primary-color);
-}
-
-button#submit-button-reg {
-    height: calc(2.25rem + 20px);
-}
-button#submit-button-reg {
-    background: var(--dark-color);
-    border-color: transparent;
-    color: var(--white-color);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-button#submit-button-reg:hover {
-    background: var(--primary-color);
-}
-
-
-
 
 /*---------------------------------------
    FOOTER
@@ -541,38 +493,6 @@ button#submit-button-reg:hover {
 
 
 
-/*游戏轮播界面*/
-.box {
-    width: 500px;
-    height: 300px;
-    border:1px solid #ccc;
-    margin: 50px auto 20px;
-    padding: 0px;
-
-}
-.inner{
-    width: 500px;
-    height: 300px;
-    position: relative;
-    overflow: hidden;
-}
-.inner img{
-    width: 500px;
-    height: 300px;
-    vertical-align: top
-
-}
-.inner ul {
-    width: 1000%;
-    position: absolute;
-    list-style: none;
-    left:0;
-    top: 0;
-}
-.inner li{
-    float: left;
-
-}
 /*小圆点*/
 ol {
     position: absolute;
@@ -652,4 +572,10 @@ ol .current{
 #submit:hover{
     background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
 }
-
+.main_left{
+    width: 150px;
+    height: 100%;
+    float:left;
+    background:#c0c0c0;
+    cursor:pointer;
+}
