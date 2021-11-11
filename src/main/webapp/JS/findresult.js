@@ -43,15 +43,40 @@ $(function(){
 			}
 		})
 	})
+
+    $
 })
 
+function showGamePage(Gid){
+    $.ajax({
+		url:"Game_Transfer",//向后端发送含有Gid的AJAX请求
+		type:"post",
+		data:{
+			"Gid":Gid
+		},
+		datatype:"json",
+		error:function(error){
+			alert(error+"请求失败");
+		},
+		success:function(result){
+			var obj = JSON.parse(result);
+			var box = document.getElementById("usericon");
+            if(result.flag==1){
+                window.href.location="../Game.html"
+            }else{
+                alert('跳转失败')
+            }
+		}
+	})
+}
+
 function showpageResult(){
-	var Choice = document.getElementById("Choice");
+	var Choice = document.getElementById("result");
     /*要获取返回数据的个数以及游戏各种数据
       向后台获取数据
     */
     $.ajax({
-        url:"GameName_Query",
+        url:"GameTypeAndName_Query",
         type:"post",
         dataType:"json",
         error:function(XMLHttpRequest, textStatus, errorThrown){
@@ -61,25 +86,22 @@ function showpageResult(){
         },
         success:function(data){
             $.each(data,function(idx,obj){
-                var li = document.createElement("li");
-                li.innerHTML = "<a>" + obj.name + "</a>";
-                document.getElementById("ul1").appendChild(li);
+                var div_result = document.createElement("div");
+                div_result.setAttribute("class","col-lg-4 col-md-6 col-12");
+                div_result.setAttribute("data-aos","fade-up");
+                div_result.setAttribute("data-aos-delay","400")
+                li.innerHTML = 
+                '<div class="class-thumb">'+
+                '<img src='+obj.Gid+'class="img-fluid" alt="Class" onclick="showGamePage('+obj.Gid+')">'+//此处显示后台传来结果的图片路径,点击后向Game_Transfer传AJAX
+                '<div class="class-info">'+
+                    '<h3 class="mb-1">'+obj.name+'</h3>'+//此处显示后台传来结果的游戏名
+                '</div>'+
+                '</div>';
+                document.getElementById("result").appendChild(li);
             });
         }
     });
 
-
-		Choice.innerHTML = 
-			'<div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">'+
-            '<div class="class-thumb">'+
-                '<img src="../Img/class/yoga-class.jpg" class="img-fluid" alt="Class">'+
-                '<div class="class-info">'+
-                    '<h3 class="mb-1">Yoga</h3>'+
-                    '<span><strong>Trained by</strong> - Bella</span>'+
-                    '<p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>'+
-                '</div>'+
-            '</div>'+
-            '</div>';
-		Choice.style.display = "block";
+		result.style.display = "block";
 
 }
