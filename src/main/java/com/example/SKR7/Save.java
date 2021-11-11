@@ -12,7 +12,6 @@ import java.io.IOException;
 public class Save extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
         /*
         接收前端发来的新用户图像和新用户名
         将发来的用户图像下载保存到webapp的Img文件夹下，并获取新用户图像路径

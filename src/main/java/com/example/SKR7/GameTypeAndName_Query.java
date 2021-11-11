@@ -12,7 +12,6 @@ import java.io.IOException;
 public class GameTypeAndName_Query extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
         /*
         从cookie中拿出Login
         如果Login = 1则增加调用UserMsg存储过程，返回用户名和用户图像路径给前端

@@ -5,5 +5,5 @@ GameTypeAndName_Query逻辑
 将返回的游戏名和图片路径和Gid设置给FindResult页面
 
 点击游戏向Game_Transfer类发送含有Gid的Ajax请求
-如果返回1跳转到Game页面
+如果成功跳转到Game页面
  */

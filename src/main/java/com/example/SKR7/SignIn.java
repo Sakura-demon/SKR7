@@ -12,7 +12,6 @@ import java.io.IOException;
 public class SignIn extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
         /*接收到前端发来的用户名和密码
         调用SignIn存储过程
         如果返回0

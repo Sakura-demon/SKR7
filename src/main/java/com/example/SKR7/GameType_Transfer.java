@@ -12,12 +12,10 @@ import java.io.IOException;
 public class GameType_Transfer extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
         /*
         接收前端发来游戏名
         将其保存到cookie内
         保存Game = “TYPE”到cookie中
-        返回1给前端
          */
     }
 }

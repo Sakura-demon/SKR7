@@ -18,5 +18,5 @@
 
 在设置点击退出用户
 向Logout类发送Ajax请求
-接收到1跳转到SignINAndRegister界面
+如果成功跳转到SignINAndRegister界面
  */
