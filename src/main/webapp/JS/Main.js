@@ -11,5 +11,5 @@
 如果返回1则跳转到FindResult页面
 
 点击游戏向Game_Transfer类发送含有Gid的Ajax请求
-如果返回1跳转到Game页面
+如果成功跳转到Game页面
  */

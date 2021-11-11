@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
@@ -52,7 +51,7 @@ public class Main extends HttpServlet {
             int Uid = (int)session.getAttribute("Uid");
             //用户图像和用户名
             try {
-                //调用数据库主页留言查询功能存储过程Main_Query
+                //调用数据库主页留言查询功能存储过程UserMsg
                 sql = con.prepareCall("{call UserMsg(?)}");
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
