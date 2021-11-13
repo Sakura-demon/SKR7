@@ -26,6 +26,38 @@
         $("iframe").attr("src",address);
     });
 });
+$(function(){
+    $.ajax({
+        url:"UserMsg",
+        type:"post",
+        data:{},
+        datatype:"json",
+        error:function(error){
+            alert(error+"请求失败");
+        },
+        success:function(result){
+            var Uimgurl = JSON.parse(result).Uimgurl;
+            $("#UserImg").attr({src:Uimgurl});
+        }
+    })
+    $.ajax({
+        url:"UserMsg",
+        type:"post",
+        data:{},
+        datatype:"json",
+        error:function(error){
+            alert(error+"请求失败");
+        },
+        success:function(result){
+            var obj = JSON.parse(result);
+            $("#userImg").attr({"src":obj.Uimgurl});
+            var Uname = document.getElementById("Uname");
+            Uname.innerHTML += obj.Uname;
+            var Uaccount = document.getElementById("Uaccount");
+            Uaccount.innerHTML += obj.Uaccount
+        }
+    })
+})
 function getJSON(){
     $.ajax({
         url:'action.php?act=getUserName',
@@ -36,9 +68,10 @@ function getJSON(){
     });
 
 }
-function Upassword(uid){
-    $("input[name='uiid']").val(uid);
-    $("#tanchukuang").show;
+
+function Upassword(){
+$("input[name='uid']").val(uid);
+$("#tanchukuang").show;
 };
 <!--关闭按钮的关闭事件-->
 $("#close").click(function(){
@@ -85,4 +118,41 @@ $(function(){
         }
     })
 });
+function Save() {
+    $.ajax({
+        url: "Save",
+        type: "post",
+        data: {
+            "AImg": $("#img").val(),
+            "Auid": $("#uid").val()
+        },
+        datatype: "json",
+        error: function (error) {
+            alert(error, "请求失败");
+        },
+        success: function (result) {
+            var obj = JSON.parse(result);
+            var flag = obj.flag;
+            if (flag == 1) {
+                alert("保存成功");
+            }
+        }
+    })
+}
+$(function() {
+    $.ajax({
+        url: "Logout",
+        type: "post",
+        error: function (error) {
+            alert(error, "请求失败");
+        },
+        success: function (result) {
+            var obj = JSON.parse(result);
+            var flag = obj.flag;
+            if (flag == 1) {
+                window.location.href = "SignINAndRegister.html";
+            }
+        }
+    })
+})
 

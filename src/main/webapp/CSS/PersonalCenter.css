@@ -573,9 +573,16 @@ ol .current{
     background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
 }
 .main_left{
-    width: 150px;
+    width: 30%;
     height: 100%;
     float:left;
+    background:#c0c0c0;
+    cursor:pointer;
+}
+.main_right{
+    width: 70%;
+    height: 100%;
+    float:right;
     background:#c0c0c0;
     cursor:pointer;
 }
