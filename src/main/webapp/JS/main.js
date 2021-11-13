@@ -385,11 +385,7 @@ function showGameProduct(){
 
 
 //滚动播放图片
-   /**
-    *
-    * @param id  传入元素的id
-    * @returns {HTMLElement | null}  返回标签对象，方便获取元素
-    */
+
    function my$(id) {
        return document.getElementById(id);
    }
@@ -404,6 +400,27 @@ function showGameProduct(){
    var imgWidth=inner.offsetWidth;
    var right=my$("right");//右箭头
    var pic=0;//存放图片
+
+
+/*此部分为右侧游戏介绍部分*/
+   var gameinfo=my$("game-info")
+   var gamename=gameinfo.children[0]
+   var gamemaker=gameinfo.children[1]
+   var gametime=gameinfo.children[3]
+   var gameintro=gameinfo.children[5]
+
+   var gamenamelist=["战地2042","宝可梦：晶灿钻石/明亮珍珠","天命奇御2","光环：无限","真三国无双8：帝国"]
+   var gamemakerlist=["DICE/EA","任天堂","甲山林娱乐","微软","KOEI"]
+   var gametimelist=["2021-11-19","2021-11-19","2021-11-23","2021-12-08","2021-12-23"]
+   var gameintrolist=["《战地2042》是一款由EA制作并发行的第一人称射击游戏，游戏会含有大规模动态破坏效果，游戏地图中几乎所有建筑都可以被摧毁，与任务目标相关的建筑除外。建筑的摧毁过程会因受损处的不同而有所变化。",
+   "《宝可梦：晶灿钻石/明亮珍珠》游戏中，玩家可以和《宝可梦钻石·珍珠》中登场的宝可梦们一起冒险。",
+   "《天命奇御2》除了场景承袭了前代的设计外，游戏内的建筑造型及造景皆全面新制，更加细致地刻画了游戏场景，地图采用无接缝地图，而战斗方面主角更可使用多种武器。",
+    "《光环：无限》当所有的希望都破灭，人类的命运悬而未决时，士官长们已经准备好面对最无情的敌人了。传说中的《光环》系列回归，并且有着至今为止最庞大的士官长故事。",
+    "《真三国无双8：帝国》游戏中采用各种手段来攻略的“攻城战”，以最终压制城府为胜利目标展开战斗，使用破坏、潜入等多种手段来攻城。玩家可以体验到君主、将军等身处不同地位的人物的生存方式，为打造强国和各种武将进行交流，建立关系。"]
+    
+   
+
+
    //根据li个数，创建小按钮
    for(var i=0;i<list.length;i++){
        var liObj=document.createElement("li");//小按钮li
@@ -415,17 +432,16 @@ function showGameProduct(){
        //为按钮注册mouseover事件
        liObj.onmouseover=function () {
            //先清除所有按钮的样式
-
            for (var j=0;j<olObj.children.length;j++){
                olObj.children[j].removeAttribute("class");
            }
            this.className="current";
            pic=this.getAttribute("index");
            animate(ulObj,-pic*imgWidth);
+           infochange(pic);
        }
 
    }
-
 
    //设置ol中第一个li有背景颜色
    olObj.children[0].className = "current";
@@ -467,6 +483,7 @@ function showGameProduct(){
            }
            olObj.children[pic].className = "current";
        }
+       infochange(pic)
    }
    left.onclick=function () {
        if (pic==0){
@@ -480,6 +497,7 @@ function showGameProduct(){
        }
        //当前的pic索引对应的按钮设置颜色
        olObj.children[pic].className = "current";
+       infochange(pic);
    };
    
    //设置任意的一个元素,移动到指定的目标位置
@@ -504,6 +522,16 @@ function showGameProduct(){
            }
        }, 40);
    }
+    
+   //改变游戏介绍页信息
+   function infochange(pic){
+       if(pic==5)pic=0
+        my$("gamename").innerText=gamenamelist[pic]
+        my$("gamemaker").innerText=gamemakerlist[pic]
+        my$("gametime").innerText=gametimelist[pic]
+        my$("gameintro").innerText=gameintrolist[pic]
+   }
+   my$("bar").onmouseover(infochange(pic))
 
 //鼠标经过有些分类出现下拉框
 
