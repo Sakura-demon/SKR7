@@ -89,5 +89,10 @@ public class Register extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        try {
+            con.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }

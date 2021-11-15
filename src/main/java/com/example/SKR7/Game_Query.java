@@ -95,5 +95,10 @@ public class Game_Query extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        try {
+            con.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }
