@@ -489,8 +489,38 @@ strong {
         display: block;
     }
 }
+/*游戏轮播界面*/
+.box {
+    width: 500px;
+    height: 300px;
+    border:1px solid #ccc;
+    margin: 50px auto 20px;
+    padding: 0px;
 
+}
+.inner{
+    width: 500px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.inner img{
+    width: 500px;
+    height: 300px;
+    vertical-align: top
 
+}
+.inner ul {
+    width: 1000%;
+    position: absolute;
+    list-style: none;
+    left:0;
+    top: 0;
+}
+.inner li{
+    float: left;
+
+}
 
 
 /*小圆点*/
@@ -571,6 +601,12 @@ ol .current{
 }
 #submit:hover{
     background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+.box{
+    width:300px;
+    height:40px;
+    border:2px solid black;
+    margin:auto;
 }
 .main_left{
     width: 30%;

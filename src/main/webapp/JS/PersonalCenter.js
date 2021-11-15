@@ -162,7 +162,7 @@ function Save() {
         }
     })
 }
-$(function() {
+function Signout() {
     $.ajax({
         url: "Logout",
         type: "post",
@@ -177,5 +177,5 @@ $(function() {
             }
         }
     })
-})
+}
 
