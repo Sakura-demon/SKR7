@@ -20,5 +20,6 @@ public class Register extends HttpServlet {
         保存和Login = 1到cookie里
         返回1给前端
          */
+
     }
 }
