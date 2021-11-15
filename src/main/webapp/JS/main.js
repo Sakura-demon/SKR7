@@ -179,9 +179,30 @@ $(function(){
 /*
 点击游戏向Game_Transfer类发送含有Gid的Ajax请求
 如果返回1跳转到Game页面
-
------→  showGamePage写在findresult.js里面了 ←-----
 */
+function showGamePage(Gid){
+    $.ajax({
+		url:"Game_Transfer",//向后端发送含有Gid的AJAX请求
+		type:"post",
+		data:{
+			"Gid":Gid
+		},
+		datatype:"json",
+		error:function(error){
+			alert(error+"请求失败");
+		},
+		success:function(result){
+			var obj = JSON.parse(result);
+			var box = document.getElementById("usericon");
+            if(result.flag==1){
+                window.location.href="../Game.html"
+            }else{
+                alert('跳转失败')
+            }
+		}
+	})
+}
+
 
 /*
 向后端要人气游戏前五名的数据
