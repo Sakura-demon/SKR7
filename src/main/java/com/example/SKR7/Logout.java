@@ -25,6 +25,7 @@ public class Logout extends HttpServlet {
         Cookie cookie = new Cookie("Login", "1");
         //设置cookie有效时间
         cookie.setMaxAge(24*60*60);
+
         //添加cookie描述
         cookie.setComment("Login");
         //设置cookie有效路径为全局
