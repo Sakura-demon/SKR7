@@ -20,6 +20,29 @@
 向Logout类发送Ajax请求
 接收到1跳转到SignINAndRegister界面
  */
+$(function() {
+    $.ajax({
+        url: "UserMsg",
+        type: "post",
+        datatype: "json",
+        error: function (error) {
+            alert(error, "请求失败");
+        },
+        success:function(result){
+            var obj = JSON.parse(result);
+            var box = document.getElementById("usericon");
+            if(result.flag!=1){
+                $("#usericon").attr({"src":Img/user/未登录头像.jpg});
+                $("#history").attr({"href":"#","data-toggle":"modal","data-target":"#membershipForm"});
+
+            }else{
+                $("#usericon").attr({"src":result.id});
+                $("#history").attr({"href":"#history","data-toggle":"#","data-target":"#"});
+
+            }
+        }
+    })
+})
     $(function(){
     $(".main_left li").on("click",function(){
         var address =$(this).attr("data-src");
