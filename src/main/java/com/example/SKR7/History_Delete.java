@@ -12,7 +12,6 @@ import java.io.IOException;
 public class History_Delete extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
         /*
         判断Vid/Pid/GSid/GMid/GAid的存在性
         存在哪个id则接收哪个id

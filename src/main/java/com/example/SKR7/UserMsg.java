@@ -18,7 +18,6 @@ import java.sql.*;
 public class UserMsg extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
         /*
         从cookie中拿出Uid
         调用UserMsg存储过程

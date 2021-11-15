@@ -12,7 +12,6 @@ import java.io.IOException;
 public class Password_Change extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
         /*
         接收前端传来的旧密码和新密码和确认密码
         判断新密码和确认密码是否一致

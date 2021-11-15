@@ -12,7 +12,6 @@ import java.io.IOException;
 public class History_Query extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
         /*
         从cookie中拿出Uid
         接收前端发来的flag
