@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 /*登陆部分 */
@@ -90,3 +91,15 @@ $(function(){
 		}
 	})
 })
+=======
+// JavaScript Document
+/*
+Signin的逻辑
+向SignIn类发送含有用户名和密码的Ajax请求
+如果返回0提示账号不存在或密码错误
+如果返回1就跳转到首页
+Register逻辑
+向Register类发送含有用户名和密码的Ajax请求
+如果返回1就跳转到首页
+ */
+>>>>>>> 038aa45360aefc106b4089d82475f929ec7e45bb
