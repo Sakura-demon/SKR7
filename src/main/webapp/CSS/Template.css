@@ -1,0 +1,18 @@
+body{
+    background: url("../Img/bk.jpg") no-repeat fixed;
+    background-position: center;
+    background-size: cover;
+}
+.box{
+    margin: 0 auto;
+    margin-top: 200px;
+    background-color: black;
+    padding: 50px 50px;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    opacity: 0.75;
+}
+.box p{
+    color: white;
+}

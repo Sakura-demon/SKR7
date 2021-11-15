@@ -1,0 +1,9 @@
+// JavaScript Document
+/*
+GameTypeAndName_Query逻辑
+一进入就向GameTypeAndName_Query类发送Ajax请求
+将返回的游戏名和图片路径和Gid设置给FindResult页面
+
+点击游戏向Game_Transfer类发送含有Gid的Ajax请求
+如果成功跳转到Game页面
+ */
