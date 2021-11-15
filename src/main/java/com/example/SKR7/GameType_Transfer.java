@@ -12,9 +12,9 @@ import java.io.IOException;
 public class GameType_Transfer extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String type = req.getParameter("Gname");
+        String Gid = req.getParameter("Gid");
         HttpSession session = req.getSession();
-        session.setAttribute("Gid",name);
+        session.setAttribute("Gid",Gid);
         session.setAttribute("Game","TYPE");
         /*
         接收前端发来游戏名
