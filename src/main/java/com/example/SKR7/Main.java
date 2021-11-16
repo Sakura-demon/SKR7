@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
@@ -52,7 +51,7 @@ public class Main extends HttpServlet {
             int Uid = (int)session.getAttribute("Uid");
             //用户图像和用户名
             try {
-                //调用数据库主页留言查询功能存储过程Main_Query
+                //调用数据库主页留言查询功能存储过程UserMsg
                 sql = con.prepareCall("{call UserMsg(?)}");
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
@@ -133,6 +132,7 @@ public class Main extends HttpServlet {
                         jsonObjectVideo.put("Vurl",imgUrl);
                         jsonObjectVideo.put("Vname",name);
                         jsonObjectVideo.put("Gid",Gid);
+                        jsonObjectVideo.put("Login",1);
                         jsonArray.add(jsonObjectVideo);
                         break;
                     case 2:
@@ -140,6 +140,7 @@ public class Main extends HttpServlet {
                         jsonObjectPainting.put("Purl",imgUrl);
                         jsonObjectPainting.put("Pname",name);
                         jsonObjectPainting.put("Gid",Gid);
+                        jsonObjectPainting.put("Login",1);
                         jsonArray.add(jsonObjectPainting);
                         break;
                     case 3:
@@ -147,6 +148,7 @@ public class Main extends HttpServlet {
                         jsonObjectGSetting.put("GSurl",imgUrl);
                         jsonObjectGSetting.put("GSname",name);
                         jsonObjectGSetting.put("Gid",Gid);
+                        jsonObjectGSetting.put("Login",1);
                         jsonArray.add(jsonObjectGSetting);
                         break;
                     case 4:
@@ -154,6 +156,7 @@ public class Main extends HttpServlet {
                         jsonObjectGMusic.put("GMurl",imgUrl);
                         jsonObjectGMusic.put("GMname",name);
                         jsonObjectGMusic.put("Gid",Gid);
+                        jsonObjectGMusic.put("Login",1);
                         jsonArray.add(jsonObjectGMusic);
                         break;
                     case 5:
@@ -161,6 +164,7 @@ public class Main extends HttpServlet {
                         jsonObjectGAccessories.put("GAimgurl",imgUrl);
                         jsonObjectGAccessories.put("GAname",name);
                         jsonObjectGAccessories.put("Gid",Gid);
+                        jsonObjectGAccessories.put("Login",1);
                         jsonArray.add(jsonObjectGAccessories);
                         break;
                 }
@@ -221,6 +225,7 @@ public class Main extends HttpServlet {
                         jsonObjectVideo.put("Vurl", imgUrl);
                         jsonObjectVideo.put("Vname", name);
                         jsonObjectVideo.put("Gid", Gid);
+                        jsonObjectVideo.put("Login",0);
                         jsonArray.add(jsonObjectVideo);
                         break;
                     case 2:
@@ -228,6 +233,7 @@ public class Main extends HttpServlet {
                         jsonObjectPainting.put("Purl", imgUrl);
                         jsonObjectPainting.put("Pname", name);
                         jsonObjectPainting.put("Gid", Gid);
+                        jsonObjectPainting.put("Login",0);
                         jsonArray.add(jsonObjectPainting);
                         break;
                     case 3:
@@ -235,6 +241,7 @@ public class Main extends HttpServlet {
                         jsonObjectGSetting.put("GSurl", imgUrl);
                         jsonObjectGSetting.put("GSname", name);
                         jsonObjectGSetting.put("Gid", Gid);
+                        jsonObjectGSetting.put("Login",0);
                         jsonArray.add(jsonObjectGSetting);
                         break;
                     case 4:
@@ -242,6 +249,7 @@ public class Main extends HttpServlet {
                         jsonObjectGMusic.put("GMurl", imgUrl);
                         jsonObjectGMusic.put("GMname", name);
                         jsonObjectGMusic.put("Gid", Gid);
+                        jsonObjectGMusic.put("Login",0);
                         jsonArray.add(jsonObjectGMusic);
                         break;
                     case 5:
@@ -249,6 +257,7 @@ public class Main extends HttpServlet {
                         jsonObjectGAccessories.put("GAimgurl", imgUrl);
                         jsonObjectGAccessories.put("GAname", name);
                         jsonObjectGAccessories.put("Gid", Gid);
+                        jsonObjectGAccessories.put("Login",0);
                         jsonArray.add(jsonObjectGAccessories);
                         break;
                 }
