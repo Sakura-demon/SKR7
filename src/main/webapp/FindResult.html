@@ -1,0 +1,113 @@
+<!--负责人：郑颖-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<link rel="stylesheet" href="CSS/FindResult.css">
+	<script src="JS/JQueryMin.js"></script>
+	<script src="JS/FindResult.js"></script>
+	<link rel="icon" href="Img/樱花招福御守.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="Img/樱花招福御守.png" type="image/x-icon"/>
+
+	<link rel="stylesheet" href="CSS/bootstrap.min.css">
+	<link rel="stylesheet" href="CSS/font-awesome.min.css">
+	<link rel="stylesheet" href="CSS/aos.css">
+	
+	<link rel="stylesheet" href="CSS/FindResult.css">
+
+</head>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50" onload="showpageUser()">
+    <!-- 菜单栏 -->
+    <nav class="navbar navbar-expand-lg fixed-top"><!--fixed-top使导航栏固定在顶部-->
+        <div class="container">
+            <!--游戏分类部分-->
+            <ul id="menu">
+                <li>游戏分类
+                    <ul>
+                        <li id="action">动作</li>
+                        <li id="role">角色扮演</li>
+                        <li id="strategy">策略</li>
+                        <li id="relax">冒险及休闲</li>
+                        <li id="sim">模拟</li>
+                        <li id="sport">体育及竞速</li>
+                    </ul>
+                </li>
+            </ul>
+            <!--搜索栏部分-->
+            <form action="get">
+                <div class="navbar-search">
+                    <input type="text" placeholder="请输入..." name="search" id="search" value=""/>
+                    <button id="search-but">搜索</button>
+                </div>
+            </form>
+            
+            <!--个人中心部分-->
+            <div class="navbar-icon" id="navbarNav">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">首页</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><img src="Img/user/用户头像.jpg" id="usericon"></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#schedule" class="nav-link" id="history">历史记录</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+	<!-- 网页背景 -->
+	<section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
+		<div class="bg-overlay"></div>
+		   <div class="container">
+				<div class="row">
+					 <div class="col-lg-8 col-md-10 mx-auto col-12">
+						  <div class="hero-text mt-5 text-center">
+								<h1 class="text-white" data-aos="fade-up" data-aos-delay="500">欢迎来到游戏世界</h1>
+						  </div>
+					 </div>
+
+				</div>
+		   </div>
+ 	</section>
+	
+	<!--搜索结果-->
+    <section class="class section" id="class">
+        <div class="container">
+             <div class="row" id="result">
+
+                <div class="col-lg-12 col-12 text-center mb-5">
+                        <h2 data-aos="fade-up" data-aos-delay="200">搜索结果</h2>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                    <div class="class-thumb">
+                             <img src="Img/class/yoga-class.jpg" class="img-fluid" alt="Class" onclick="">
+
+                             <div class="class-info">
+                                 <h3 class="mb-1">实例</h3>
+                             </div>
+                    </div>
+                </div>
+
+             </div>
+        </div>
+    </section>
+
+
+
+     <!-- SCRIPTS -->
+     <script src="JS/jquery.min.js"></script>
+     <script src="JS/smoothscroll.js"></script>
+     <script src="JS/custom.js"></script>
+     <script src="JS/bootstrap.min.js"></script>
+     <script src="JS/aos.js"></script>
+     <script src="JS/FindResult.js"></script>
+</body>
+</html>
