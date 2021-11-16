@@ -25,6 +25,7 @@ public class Save extends HttpServlet {
         调用Save存储过程
         返回调用结果给前端
          */
+
         String Uname = req.getParameter("Uname");
         String stream = req.getParameter("Image");
         String imagePath = "/Img/" + Uname + ".png";

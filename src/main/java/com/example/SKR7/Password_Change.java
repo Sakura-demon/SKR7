@@ -22,6 +22,7 @@ public class Password_Change extends HttpServlet {
         如果一致调用Password_Change存储过程
         返回调用返回结果给前端
          */
+
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {

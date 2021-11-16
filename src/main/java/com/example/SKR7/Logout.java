@@ -18,7 +18,6 @@ public class Logout extends HttpServlet {
         /*
         将cookie中的Login = 1设置为0
          */
-
         //创建新的cookie
         Cookie cookie = new Cookie("Login", "1");
         //设置cookie有效时间
