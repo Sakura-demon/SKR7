@@ -8,3 +8,4 @@ Register逻辑
 向Register类发送含有用户名和密码的Ajax请求
 如果返回1就跳转到首页
  */
+

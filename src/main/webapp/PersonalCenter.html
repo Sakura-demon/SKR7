@@ -2,15 +2,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-	<link rel="stylesheet" href="CSS/PersonalCenter.css">
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="CSS/History.css">
 	<script src="JS/JQueryMin.js"></script>
-	<script src="JS/PersonalCenter.js"></script>
+	<script src="JS/History.js"></script>
 	<link rel="icon" href="Img/樱花招福御守.png" type="image/x-icon" />
-	<link rel="shortcut icon" href="Img/樱花招福御守.png" type="image/x-icon"/>
+<link rel="shortcut icon" href="Img/樱花招福御守.png" type="image/x-icon"/>
+	<link rel="stylesheet" href="CSS/bootstrap.min.css">
+	<link rel="stylesheet" href="CSS/font-awesome.min.css">
+	<link rel="stylesheet" href="CSS/aos.css">
+
+	<link rel="stylesheet" href="CSS/PersonalCenter.css">
 </head>
 <body>
+        <!-- 菜单栏 -->
+    <nav class="navbar navbar-expand-lg fixed-top"><!--fixed-top使导航栏固定在顶部-->
+	<div class="container">
+		<ul id="menu">
+			<li>游戏分类
+			</li>
+		</ul>
+		<!--搜索栏部分-->
+		<form action="get">
+			<div class="navbar-search">
+				<input type="text" placeholder="请输入..." name="search" value="" />
+				<button>搜索</button>
+			</div>
+		</form>
+		<!--个人中心部分-->
+		<div class="navbar-icon" id="navbarNav">
+			<ul class="navbar-nav ml-lg-auto">
+				<li class="nav-item">
+					<a href="#home" class="nav-link">首页</a>
+				</li>
 
+				<li class="nav-item">
+					<a href="#" class="nav-link"><img src="../Img/user/用户头像.jpg"></a>
+				</li>
+
+				<li class="nav-item">
+					<a href="#schedule" class="nav-link">历史记录</a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+</nav>
+		<!-- 网页背景 -->
+		<section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
+			<div class="bg-overlay"></div>
+			<div class="container">
+			</div>
+		</section>
+		<!-- 左侧导航 -->
+		<div class="main_left" style="height:100%">
+			<ul>
+				<li data-src="user.html">用户中心</li>
+				<li data-src="Set.html">设置</li>
+			</ul>
+		</div>
+		<!-- 右侧内容 -->
+		<div class="main_right">
+
+			<iframe  src="user.html" id="aa" style="width:100%"></iframe>
+		</div>
+
+<!--SCRIPTS-->
+<script src="JS/PersonalCenter.js"></script>
 </body>
 </html>
