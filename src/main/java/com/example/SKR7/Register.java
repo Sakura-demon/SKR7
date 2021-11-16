@@ -7,10 +7,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
@@ -31,54 +28,50 @@ public class Register extends HttpServlet {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        Connection con = null;
+        Connection conn = null;
         try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/SKR7?serverTimezone=GMT&characterEncoding=utf-8","root","12345678");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/SKR7?serverTimezone=GMT&characterEncoding=utf-8","root","12345678");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         CallableStatement sql = null;
 
-        int Uid = Integer.parseInt(req.getParameter("Uid"));
-        String Pwd = req.getParameter("Pwd");
+        JSONArray jsonArray = new JSONArray();
+        HttpSession session = req.getSession();
+        String userId = (String) session.getAttribute("Uid");
+        String psw = (String) session.getAttribute("psw");
         try {
-            //调用数据库主页留言查询功能存储过程UserMsg
-            sql = con.prepareCall("{call Register(?, ?)}");
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        try {
-            sql.setInt(1,Uid);
-            sql.setString(2, Pwd);
+            sql = conn.prepareCall("{call Register(?, ?)}");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         ResultSet rs = null;
+        JSONObject jsonObjectPswChange = new JSONObject();
+        try {
+            sql.setString(1, userId);
+            sql.setString(2, psw);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         try {
             rs = sql.executeQuery();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
         try {
-            int result = rs.getInt(0);
-            if (result == 1) {
-
-                JSONArray jsonArray = new JSONArray();
-                JSONObject registerJsonObject = new JSONObject();
-                registerJsonObject.put("Login", 1);
-                jsonArray.add(registerJsonObject);
-                resp.setContentType("text/html;charset=utf-8");
-                PrintWriter writer = resp.getWriter();
-                writer.println(jsonArray);
-                writer.flush();
-                writer.close();
-                Cookie loginXookie = new Cookie("Login", "1");
-                resp.addCookie(loginXookie);
+            if (rs.getString("result").equals("1")) {
+                Cookie resultCookie = new Cookie("Login", "1");
+                resultCookie.setPath("/");
+                resultCookie.setComment("登陆结果");
+                resultCookie.setMaxAge(24*60*60);
+                resp.addCookie(resultCookie);
+                jsonObjectPswChange.put("result", 1);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         try {
             rs.close();
         } catch (SQLException throwables) {
@@ -90,9 +83,16 @@ public class Register extends HttpServlet {
             throwables.printStackTrace();
         }
         try {
-            con.close();
+            conn.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+
+        resp.setContentType("text/html;charset=utf-8");
+        PrintWriter writer = resp.getWriter();
+        writer.println(jsonArray);
+        writer.flush();
+        writer.close();
+        resp.sendRedirect("/Main.html");
     }
 }
