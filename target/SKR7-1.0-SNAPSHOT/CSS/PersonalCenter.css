@@ -1,3 +1,491 @@
-@charset "utf-8";
-/* CSS Document */
+@charset "utf - 8";
+body {
+    background: var(--white-color);
+    font-family: var(--base-font-family);
+}@font-face {
+    font-family: 'Plain';
+    src: url('../fonts/Plain-Regular.woff2') format('woff2'),
+    url('../fonts/Plain-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'Plain';
+    src: url('../fonts/Plain-Light.woff2') format('woff2'),
+    url('../fonts/Plain-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plain';
+    src: url('../fonts/Plain-Bold.woff2') format('woff2'),
+    url('../fonts/Plain-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --primary-color:        #f13a11;
+    --white-color:          #ffffff;
+    --dark-color:           #171819;
+    --about-bg-color:       #f9f9f9;
+
+    --gray-color:           #909090;
+    --link-color:           #404040;
+    --p-color:              #666262;
+
+    --base-font-family:     'Plain', sans-serif;
+    --font-weight-bold:     bold;
+    --font-weight-normal:   normal;
+    --font-weight-light:    300;
+    --font-weight-thin:     100;
+
+    --h1-font-size:         48px;
+    --h2-font-size:         36px;
+    --h3-font-size:         28px;
+    --h4-font-size:         24px;
+    --h5-font-size:         22px;
+    --h6-font-size:         22px;
+    --p-font-size:          18px;
+    --base-font-size:       16px;
+    --menu-font-size:       20px;
+
+    --border-radius-large:  100%;
+    --border-radius-small:  2px;
+}
+
+
+
+/*---------------------------------------
+   TYPOGRAPHY
+-----------------------------------------*/
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: var(--font-weight-thin);
+    line-height: normal;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -2px;
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+h4 {
+    font-size: var(--h4-font-size);
+}
+
+h5 {
+    font-size: var(--h5-font-size);
+}
+
+h6 {
+    color: var(--gray-color);
+    font-size: var(--h6-font-size);
+    line-height: inherit;
+    margin: 0;
+}
+
+p {
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-light);
+    line-height: 1.5em;
+}
+
+b,
+strong {
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0;
+}
+
+.section {
+    padding: 2rem 0 8rem;
+}
+
+
+/* BUTTON */
+
+.custom-btn {
+    background: transparent;
+    border-radius: var(--border-radius-small);
+    padding: 14px 24px;
+    color: var(--white-color);
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-normal);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    color: var(--primary-color);
+}
+
+.custom-btn:focus {
+    box-shadow: none;
+}
+
+.custom-btn.bordered:hover,
+.custom-btn.bordered:focus,
+
+.custom-btn.bg-color:hover,
+.custom-btn.bg-color:focus {
+    background: var(--white-color);
+    border-color: transparent;
+    color: var(--primary-color);
+}
+
+.bordered {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.bg-color {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+/*---------------------------------------
+   搜索BUTTONS
+-----------------------------------------*/
+
+.section-btn {
+    background: #29ca8e;
+    border: 0;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 12px 30px;
+    transition: 0.5s 0.2s;
+}
+
+.section-btn:hover,
+.section-btn:focus {
+    background: #202020;
+    color: #ffffff;
+}
+/*---------------------------------------
+   导航栏部分
+-----------------------------------------*/
+
+.navbar {
+    background: var(--dark-color);
+    padding: 1rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+/*搜索框部分css*/
+
+.navbar-search{
+    width: 300px;
+    display: flex;
+    /*border: 1px solid red;*/
+}
+.navbar-search input{
+    float: left;
+    flex: 4;
+    height: 35px;
+    outline: none;
+    border: 2px solid red;
+    box-sizing: border-box;/*盒子模型，怪异IE盒子模型.width=content+border*2+padding*2*/
+    padding-left: 10px;
+}
+.navbar-search button{
+    float: right;
+    flex: 1;
+    height: 35px;
+    background-color: red;
+    color: white;
+    border-style: none;
+    outline: none;
+    font-style: normal;
+}
+.navbar-search button:hover{
+    font-size: 16px;
+}
+
+/*游戏分类部分css*/
+
+#menu,#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#menu>li {
+    position: relative;
+    float: left;
+    color: var(--white-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-weight-bold);
+    line-height: normal;
+    padding-top: 0;
+    margin-right: 15rem;
+    list-style: none;
+    width: 180px;
+}
+#menu>li>ul {
+    position: absolute;
+    top: 100%;
+    background-color:var(--dark-color);
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+#menu>li:hover>ul {
+    max-height: 500px;
+    width: auto;
+    opacity: 1;
+}
+#menu>li li:hover {
+    background-color: rgb(95, 95, 97);
+}
+
+
+/*个人中心部分*/
+.nav-icon{
+    margin-top: auto;
+}
+
+.nav-item .nav-link {
+    display: block;
+    color: var(--white-color);
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-normal);
+    padding: 6px 6px;
+}
+
+.nav-item .nav-link img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}/*设置用户头像为圆形*/
+
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
+    color: var(--primary-color);
+}
+
+
+
+
+
+/*---------------------------------------
+   个人中心背景图
+-----------------------------------------*/
+
+.hero {
+    background-image: url('../Img/user/个人中心背景.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    min-height: 50vh;
+    position: relative;
+}
+
+
+/*---------------------------------------
+   页脚
+-----------------------------------------*/
+
+.site-footer {
+    border-top: 1px solid #efebeb;
+    padding: 3rem 0;
+}
+
+.site-footer a {
+    color: var(--p-color);
+    font-weight: var(--font-weight-light);
+}
+
+.site-footer p {
+    font-size: var(--base-font-size);
+}
+
+.contact .fa,
+.site-footer .fa {
+    color: var(--primary-color);
+}
+
+
+
+/*---------------------------------------
+   RESPONSIVE STYLES
+-----------------------------------------*/
+
+@media screen and (max-width: 992px) {
+
+    .section {
+        padding: 5rem 0;
+    }
+
+    .nav-item .nav-link {
+        padding: 6px;
+    }
+
+    .navbar .social-icon {
+        margin-top: 22px;
+    }
+
+    .navbar-collapse,
+    .site-footer {
+        text-align: center;
+    }
+
+    .schedule-table {
+        display: block;
+    }
+
+    .modal-content {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .about-working-hours {
+        border-left: 0;
+        padding: 22px 0 0 0;
+    }
+
+    .contact h2 span {
+        display: block;
+    }
+}
+
+
+.round_icon{
+    width:100px;
+    height:100px;
+    display:flex;
+    border-radius:50%;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+.userbox{
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+.sys{
+    display: flex;
+    justify-content: space-around;
+    width: 100%
+}
+#submit{
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    height: 121px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 40px;
+    font-family: 楷体;
+    font-weight: bolder;
+}
+#submit:hover{
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+.box{
+    width:300px;
+    height:40px;
+    border:2px solid black;
+    margin:auto;
+}
+
+
+
+  /*---------------------------------------
+     MODAL              
+  -----------------------------------------*/
+
+
+  .modal-content {
+    padding: 2rem 3rem;
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    border: 0;
+    padding: 0;
+  }
+
+  .membership-form a {
+    color: var(--primary-color);
+  }
+
+
+
+
+  /*---------------------------------------
+     登陆注册界面部分            
+  -----------------------------------------*/
+
+  .webform input,
+  button#submit-button {
+    height: calc(2.25rem + 20px);
+  }
+
+  .form-control {
+    border-radius: var(--border-radius-small);
+    margin: 1.3rem 0;
+  }
+
+  .form-control:focus {
+    box-shadow: none;
+    border-color: var(--dark-color);
+  }
+
+  button#submit-button {
+    background: var(--dark-color);
+    border-color: transparent;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button#submit-button:hover {
+    background: var(--primary-color);
+  }
+
+  button#submit-button-reg {
+    height: calc(2.25rem + 20px);
+  }
+  button#submit-button-reg {
+    background: var(--dark-color);
+    border-color: transparent;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button#submit-button-reg:hover {
+    background: var(--primary-color);
+  }
