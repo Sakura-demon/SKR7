@@ -38,14 +38,7 @@ public class GameTypeAndName_Query extends HttpServlet {
         CallableStatement sql = null;
         //获取Login
         ResultSet rs = null;
-        String Uimg=null;
-        int Uid = 0;
         HttpSession session = req.getSession();
-        int Login = 1;
-        if (session.getAttribute("Login") == null){
-            Login = 0;
-        }
-
         String Game = (String) session.getAttribute("Game");
         if (Game.equals("TYPE"))
         {
@@ -84,7 +77,7 @@ public class GameTypeAndName_Query extends HttpServlet {
         调用GameName_Query存储过程
         返回给前端游戏名和游戏图片路径和Gid
          */
-        JSONArray jsonArray = new JSONArray();
+        JSONArray jsonArray1 = new JSONArray();
         while (true){
             try {
                 if (!rs.next()) break;
@@ -96,50 +89,17 @@ public class GameTypeAndName_Query extends HttpServlet {
                 jsonObjectG.put("Gname",rs.getString("Gname"));
                 jsonObjectG.put("Gimgurl",rs.getString("Gimgurl"));
                 jsonObjectG.put("Gid",rs.getInt("Gid"));
-                jsonArray.add(jsonObjectG);
+                jsonArray1.add(jsonObjectG);
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
         }
-        if (Login == 1) {
-            Uid = (int) session.getAttribute("Uid");
-            //用户图像和用户名
-            try {
-                //调用数据库主页留言查询功能存储过程UserMsg
-                sql = con.prepareCall("{call UserMsg(?)}");
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-            try {
-                sql.setInt(1,Uid);
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-            try {
-                rs = sql.executeQuery();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-            try {
-                rs.next();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-            try {
-                Uimg = rs.getString("Uimg");
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-            try {
-                Uid = rs.getInt("Uid");
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("Uid",Uid);
-            jsonObject.put("Uimg",Uimg);
-            jsonArray.add(jsonObject);
-        }
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("len",jsonArray1.size());
+        JSONArray jsonArray = new JSONArray();
+        jsonArray.add(jsonObject);
+        jsonArray.add(jsonArray1);
         resp.setContentType("text/html;charset=utf-8");
         PrintWriter writer = resp.getWriter();
         writer.println(jsonArray);
